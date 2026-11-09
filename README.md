@@ -1,1 +1,71 @@
-IyBkc2gtdW1icmVsCgpEZWVwU2VlayBIYXJuZXNzIChgQGRlZXBzZWVrLWFpL2RzaGAsIE1JVCkgcGFja2FnZWQgdG8gcnVuIG9uIHVtYnJlbE9TIGFzCnRoZSBhcHAgKippY29uaWNmaW5lc3NlLWRzaCoqIGluIHRoZSBJY29uaWNGaW5lc3NlIGNvbW11bml0eSBzdG9yZS4KCiMjIFNoYXBlCgpPbmUgdGhpbiBpbWFnZSAoTm9kZSAyNiArIGdpdCksIHR3byByb2xlcywgb25lIHNoYXJlZCBkYXRhIHZvbHVtZToKCi0gKipgZHNoYCBzZXJ2aWNlKiog4oCUIHRoZSBoYXJuZXNzLiBUaGUgaW1hZ2UgY2FycmllcyBubyBkc2ggYXQgYWxsOiBhbgogIGVudHJ5cG9pbnQgaW5zdGFsbHMgaXQgZnJvbSBucG0gaW50byB0aGUgdm9sdW1lIGFuZCBrZWVwcyBpdCBjb252ZXJnZWQuCi0gKipgd2ViYCBzZXJ2aWNlKiog4oCUIGEgc21hbGwgcGFzc3dvcmQgZ2F0ZSAoemVyby1kZXBlbmRlbmN5IE5vZGUpIGluIGZyb250CiAgb2YgZHNoIHdlYi4gZHNoJ3Mgb3duIHdlYiBzaWduLWluIGlzIGEgb25lLXRpbWUgbGF1bmNoLXRva2VuIGxpbms7IHRoZQogIGdhdGUgZXhjaGFuZ2VzIHRoYXQgdG9rZW4gc2VydmVyLXNpZGUgKGl0IHJlYWRzIHRoZSBjdXJyZW50IGxpbmsgZnJvbSB0aGUKICBzaGFyZWQgdm9sdW1lKSBzbyBubyB0b2tlbiBldmVyIGFwcGVhcnMgaW4gYSBicm93c2VyIFVSTC4gU2lnbi1pbiBpcwogIHBhc3N3b3JkLW9ubHkgd2l0aCBhIGZpcnN0LXJ1biBzZXR1cDogdW50aWwgdGhlIG93bmVyIGNyZWF0ZXMgYSBwYXNzd29yZAogIG9uIGZpcnN0IG9wZW4sIHRoZSBnYXRlIHNlcnZlcyBhIG9uZS10aW1lIHNldHVwIHBhZ2U7IHRoYXQgcGFzc3dvcmQgaXMKICB0aGUgc2lnbi1pbiBmcm9tIHRoZW4gb24gKHRoZSBnYXRlIHN0b3JlcyBvbmx5IGEgc2FsdGVkIHNjcnlwdCBoYXNoKS4KICBUaGUgZ2F0ZSBwcmVzZW50cyBkc2gncyBvd24gYm91bmQgYXV0aG9yaXR5IHVwc3RyZWFtLCBzbyBpdCB3b3JrcyBhdAogIHdoYXRldmVyIGFkZHJlc3MgdGhlIGFwcCBsYW5kcyBvbi4KCkFsbCBkdXJhYmxlIHN0YXRlIGlzIGluIHRoZSBhcHAgZGF0YSBmb2xkZXI6IHRoZSBoYXJuZXNzIGluc3RhbGwsIERTSF9IT01FCihgaG9tZS8uZHNoYCDigJQgcHJvdmlkZXJzLCBrZXlzLCBwcm9maWxlcywgcGx1Z2lucywgc2Vzc2lvbnMpLCB0aGUgZGVmYXVsdAp3b3Jrc3BhY2UgKHRoZSB2b2x1bWUncyBob21lKSwgdGhlIGxhdW5jaCBsaW5rLCBhbmQgdGhlIGdhdGUncyByZWNvcmQuCgojIyBVcGRhdGVzOiBhbHdheXMgbGF0ZXN0LCBuZXZlciBkZXN0cnVjdGl2ZQoKT24gZXZlcnkgc3RhcnQgdGhlIGVudHJ5cG9pbnQgcmVzb2x2ZXMgdGhlIHZlcnNpb24gdHJhY2tlZCBpbgpgZGF0YS9kc2gtdmVyc2lvbi50eHRgIOKAlCBieSBkZWZhdWx0IHRoZSBucG0gYGxhdGVzdGAgZGlzdC10YWcg4oCUIGFuZCwgaWYgaXQKbW92ZWQsIGluc3RhbGxzIHRoZSBuZXcgdmVyc2lvbiAqYmVzaWRlKiB0aGUgb2xkIG9uZSwgdmVyaWZpZXMgdGhlIGJpbmFyeQpydW5zLCB0aGVuIHN3YXBzIGF0b21pY2FsbHkuIFRoZSBwcmV2aW91cyBpbnN0YWxsIGlzIGtlcHQgYXMgYQpvbmUtZ2VuZXJhdGlvbiByb2xsYmFjaywgYW5kIGlmIGEgZnJlc2ggdXBkYXRlIGZhaWxzIHRvIGNvbWUgdXAgdGhlCmVudHJ5cG9pbnQgcm9sbHMgYmFjayBvbiBpdHMgb3duLiBBIGZhaWxlZCAqZG93bmxvYWQqIGp1c3Qga2VlcHMgdGhlIG9sZAp2ZXJzaW9uIHNlcnZpbmcuIFVzZXIgZGF0YSBpcyBuZXZlciBpbiB0aGUgc3dhcCBwYXRoLCBzbyB1cGRhdGVzIGNhbm5vdApkZWxldGUgaXQuIFRvIGZyZWV6ZSBvbiBhbiBleGFjdCB2ZXJzaW9uLCB3cml0ZSBpdCBpbnRvCmBkYXRhL2RzaC12ZXJzaW9uLnR4dGAgYW5kIHJlc3RhcnQgdGhlIGFwcC4KClRoZSBpbWFnZSBpdHNlbGYgY2hhbmdlcyBvbmx5IHdoZW4gdGhlIGVudHJ5cG9pbnQsIHRoZSBnYXRlLCBvciB0aGUgYmFzZQppbWFnZSBjaGFuZ2VzOyBDSSAoYC5naXRodWIvd29ya2Zsb3dzL2J1aWxkLWltYWdlLnltbGApIGJ1aWxkcyBtdWx0aS1hcmNoCihhbWQ2NCArIGFybTY0KSB0byBHSENSLiBkc2ggcmVsZWFzZXMgbmV2ZXIgdG91Y2ggdGhpcyBwaXBlbGluZS4KCiMjIFNjb3BlCgpJbnNpZGUgdGhlIGFwcCwgdGhlIGFnZW50J3MgImZ1bGwgYWNjZXNzIiByZWFjaGVzIHRoZSBhcHAncyBjb250YWluZXIgYW5kCmRhdGEgZm9sZGVyIOKAlCBub3QgdGhlIFVtYnJlbCBob3N0LiBIb3N0L2FkbWluIGNvbnRyb2wgaXMgYSBzZXBhcmF0ZSB3aXJpbmc6CmRzaCBhcyBhbiBNQ1AgY2xpZW50IHRvIHRoZSB1bWJyZWxPUyBBZ2VudHMgTUNQLCB0aGUgd2F5IEFnZW50IFplcm8gLwpIZXJtZXMgY29udGFpbmVycyByZWFjaCBpdC4KCiMjIFNwaWtlIHJlc3VsdHMgKDIwMjYtMTEtMDgsIGFsbCB2ZXJpZmllZCBsaXZlKQoKUnVuIGluIEFyY2FuZSdzIG5lc3RlZCBEb2NrZXIgb24gdGhlIFVtYnJlbCBob3N0IChrZXJuZWwgNi4xMik6CgoxLiAqKmRzaCB3ZWIgcnVucyBpbiBhIGNvbnRhaW5lcioqIOKAlCBmdWxsIGJyb3dzZXIgZmxvdzogYXV0aCBmZW5jZSAoNDAxKSDihpIKICAgdG9rZW4gZXhjaGFuZ2UgKDMwMyArIGNvb2tpZSkg4oaSIFVJICgyMDApLiBkc2ggcmVmdXNlcyB3aWxkY2FyZCBiaW5kcyBieQogICBkZXNpZ24sIHNvIHRoZSBlbnRyeXBvaW50IHJlc29sdmVzIHRoZSBjb250YWluZXIncyBjb25jcmV0ZSBJUHY0LgoyLiAqKkxhbmRsb2NrIEFCSSA1IGlzIGF2YWlsYWJsZSBpbi1jb250YWluZXIqKiB1bmRlciBEb2NrZXIncyBkZWZhdWx0CiAgIHNlY2NvbXAgcHJvZmlsZSwgc28gZHNoJ3MgUmVhZCBPbmx5IC8gV29ya3NwYWNlIFdyaXRlIHByZXNldHMgd29yayBpbgogICBhcHAgZm9ybS4gKGBwcm9iZS9sYW5kbG9ja19wcm9iZS5weWApCjMuICoqVXBkYXRlcyBwcm92ZW4gYm90aCBkaXJlY3Rpb25zKiog4oCUIHBpbiBidW1wIDAuMi4xLXJjLjUg4oaSIDAuMi4yLXJjLjEKICAgc3dhcHBlZCBjbGVhbmx5IHdpdGggYSBgfi8uZHNoYCBtYXJrZXIgU0hBLTI1Ni1pZGVudGljYWwgYWZ0ZXI7IGEgYm9ndXMKICAgcGluIHdhcyByZWplY3RlZCB3aXRoIHRoZSBvbGQgdmVyc2lvbiBrZXB0IHNlcnZpbmcuCgojIyBMYXlvdXQKCi0gYERvY2tlcmZpbGVgLCBgZW50cnlwb2ludC5zaGAg4oCUIHRoZSBpbWFnZSBhbmQgdGhlIGRzaCByb2xlCi0gYGdhdGUvZ2F0ZS5qc2Ag4oCUIHRoZSBwYXNzd29yZCBmcm9udCBkb29yICh0aGUgb3JpZ2luYWwgVk0gaW5zdGFsbCBydW5zCiAgaXRzIG93biBlYXJsaWVyIGNvcHkgb2YgdGhlIGdhdGUsIGluIHVzZXJuYW1lK3Bhc3N3b3JkIG1vZGU7IHRoaXMgZmlsZQogIGRlZmF1bHRzIHRvIHRoYXQgc2FtZSBtb2RlIGFuZCBhZGRzIHRoZSBhcHAncyBwYXNzd29yZC1vbmx5IHNldHVwIG1vZGUpCi0gYHByb29mL2Ag4oCUIGEgbG9jYWwgY29tcG9zZSBwcm9vZiBvZiB0aGUgcHJvZHVjdGlvbiBzaGFwZSArIHRlc3QgYmF0dGVyeQotIFRoZSBVbWJyZWwgcGFja2FnZSBpdHNlbGYgKG1hbmlmZXN0ICsgY29tcG9zZSkgbGl2ZXMgaW4gdGhlCiAgKippY29uaWNmaW5lc3NlLXVtYnJlbC1hcHAtc3RvcmUqKiByZXBvIHVuZGVyIGBpY29uaWNmaW5lc3NlLWRzaC9gCg==
+# dsh-umbrel
+
+DeepSeek Harness (`@deepseek-ai/dsh`, MIT) packaged to run on umbrelOS as
+the app **iconicfinesse-dsh** in the IconicFinesse community store.
+
+## Shape
+
+One thin image (Node 26 + git), two roles, one shared data volume:
+
+- **`dsh` service** — the harness. The image carries no dsh at all: an
+  entrypoint installs it from npm into the volume and keeps it converged.
+- **`web` service** — a small password gate (zero-dependency Node) in front
+  of dsh web. dsh's own web sign-in is a one-time launch-token link; the
+  gate exchanges that token server-side (it reads the current link from the
+  shared volume) so no token ever appears in a browser URL. Sign-in is
+  password-only with a first-run setup: until the owner creates a password
+  on first open, the gate serves a one-time setup page; that password is
+  the sign-in from then on (the gate stores only a salted scrypt hash).
+  The gate presents dsh's own bound authority upstream, so it works at
+  whatever address the app lands on.
+
+All durable state is in the app data folder: the harness install, DSH_HOME
+(`home/.dsh` — providers, keys, profiles, plugins, sessions), the default
+workspace (the volume's home), the launch link, and the gate's record.
+
+## Updates: always latest, never destructive
+
+On every start the entrypoint resolves the version tracked in
+`data/dsh-version.txt` — by default the npm `latest` dist-tag — and, if it
+moved, installs the new version *beside* the old one, verifies the binary
+runs, then swaps atomically. The previous install is kept as a
+one-generation rollback, and if a fresh update fails to come up the
+entrypoint rolls back on its own. A failed *download* just keeps the old
+version serving. User data is never in the swap path, so updates cannot
+delete it. To freeze on an exact version, write it into
+`data/dsh-version.txt` and restart the app.
+
+The image itself changes only when the entrypoint, the gate, or the base
+image changes; CI (`.github/workflows/build-image.yml`) builds multi-arch
+(amd64 + arm64) to GHCR. dsh releases never touch this pipeline.
+
+## Scope
+
+Inside the app, the agent's "full access" reaches the app's container and
+data folder — not the Umbrel host. Host/admin control is a separate wiring:
+dsh as an MCP client to the umbrelOS Agents MCP, the way Agent Zero /
+Hermes containers reach it.
+
+## Spike results (2026-11-08, all verified live)
+
+Run in Arcane's nested Docker on the Umbrel host (kernel 6.12):
+
+1. **dsh web runs in a container** — full browser flow: auth fence (401) →
+   token exchange (303 + cookie) → UI (200). dsh refuses wildcard binds by
+   design, so the entrypoint resolves the container's concrete IPv4.
+2. **Landlock ABI 5 is available in-container** under Docker's default
+   seccomp profile, so dsh's Read Only / Workspace Write presets work in
+   app form. (`probe/landlock_probe.py`)
+3. **Updates proven both directions** — pin bump 0.2.1-rc.5 → 0.2.2-rc.1
+   swapped cleanly with a `~/.dsh` marker SHA-256-identical after; a bogus
+   pin was rejected with the old version kept serving.
+
+## Layout
+
+- `Dockerfile`, `entrypoint.sh` — the image and the dsh role
+- `gate/gate.js` — the password front door (the original VM install runs
+  its own earlier copy of the gate, in username+password mode; this file
+  defaults to that same mode and adds the app's password-only setup mode)
+- `proof/` — a local compose proof of the production shape + test battery
+- The Umbrel package itself (manifest + compose) lives in the
+  **iconicfinesse-umbrel-app-store** repo under `iconicfinesse-dsh/`
