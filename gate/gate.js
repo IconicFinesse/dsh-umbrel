@@ -1,1 +1,509 @@
-IyEvdXNyL2Jpbi9lbnYgbm9kZQovLyBkc2gtZ2F0ZTogYSBwYXNzd29yZCBmcm9udCBkb29yIGZvciB0aGUgRGVlcFNlZWsgSGFybmVzcyBXZWIgVUkuCi8vIFplcm8gZGVwZW5kZW5jaWVzIChub2RlOmh0dHAgb25seSkuIExpdmVzIE9VVFNJREUgdGhlIGRzaCBucG0gcGFja2FnZSBzbwovLyBkc2ggdXBkYXRlcyBuZXZlciB0b3VjaCBpdC4gSXQgZGVwZW5kcyBvbmx5IG9uIGRzaCdzIHB1YmxpYywgYnJvd3Nlci1mYWNpbmcKLy8gYmVoYXZpb3I6IHRoZSBsYXVuY2gtdG9rZW4gbGluayAocmVhZCBmcm9tIHRoZSBsaW5rIGZpbGUsIHJlZnJlc2hlZCBieQovLyB0aGUgaGFybmVzcyBsYXVuY2hlciBvbiBldmVyeSBkc2ggc3RhcnQpIGFuZCB0aGUgY29va2llIHRoYXQgZXhjaGFuZ2UKLy8gbWludHMuCi8vIFRoZSB0b2tlbiBpcyBleGNoYW5nZWQgc2VydmVyLXNpZGUgYW5kIG5ldmVyIGFwcGVhcnMgaW4gdGhlIGJyb3dzZXIuCid1c2Ugc3RyaWN0JzsKCmNvbnN0IGh0dHAgPSByZXF1aXJlKCdub2RlOmh0dHAnKTsKY29uc3QgbmV0ID0gcmVxdWlyZSgnbm9kZTpuZXQnKTsKY29uc3QgZnMgPSByZXF1aXJlKCdub2RlOmZzJyk7CmNvbnN0IG9zID0gcmVxdWlyZSgnbm9kZTpvcycpOwpjb25zdCBjcnlwdG8gPSByZXF1aXJlKCdub2RlOmNyeXB0bycpOwoKY29uc3QgcGF0aCA9IHJlcXVpcmUoJ25vZGU6cGF0aCcpOwpjb25zdCBQT1JUID0gTnVtYmVyKHByb2Nlc3MuZW52LkdBVEVfUE9SVCB8fCAzMDgxKTsKY29uc3QgTElOS19GSUxFID0gcHJvY2Vzcy5lbnYuR0FURV9MSU5LX0ZJTEUgfHwgJy9kYXRhL2hvbWUvZHNoLWxpbmsudHh0JzsKY29uc3QgQ09ORklHX0ZJTEUgPSBwcm9jZXNzLmVudi5HQVRFX0NPTkZJRyB8fCAnL2RhdGEvZ2F0ZS9nYXRlLmpzb24nOwpjb25zdCBVUFNUUkVBTV9QT1JUID0gTnVtYmVyKHByb2Nlc3MuZW52LkdBVEVfVVBTVFJFQU1fUE9SVCB8fCAzMDgwKTsKY29uc3QgQ09PS0lFX05BTUUgPSAnZHNoX2dhdGUnOwovLyBUaGUgZ2F0ZSBzZXNzaW9uIG5ldmVyIGV4cGlyZXMgc2VydmVyLXNpZGU6IHRoZSB1c2VyJ3MgcGFzc3dvcmQgaXMgdGhlCi8vIGNyZWRlbnRpYWwsIGFuZCB0aGUgc2Vzc2lvbiBpdCBtaW50cyBpcyBwZXJtYW5lbnQgKGxvZ291dCBvciB3aXBpbmcgdGhlCi8vIGNyZWRlbnRpYWwgcmVjb3JkIGFyZSB0aGUgb25seSB3YXlzIG91dCkuIEJyb3dzZXJzIGNhcCBjb29raWUgbGlmZXRpbWUKLy8gKENocm9tZTogNDAwIGRheXMpLCBzbyB0aGUgY29va2llIGNhcnJpZXMgdGhlIG1heCBhbGxvd2VkIGFnZSBhbmQgdGhlCi8vIGdhdGUgc2lsZW50bHkgcmUtaXNzdWVzIGl0IG9uIHJlc3BvbnNlcyBvbmNlIGl0IGlzIGEgZGF5IG9sZCDigJQgaW4KLy8gcHJhY3RpY2UgdGhlIHNpZ24taW4gbGFzdHMgZm9yZXZlci4gQmVoaW5kIHRoZSBnYXRlLCBkc2gncyBvd24gMzAtZGF5Ci8vIGNvb2tpZSBsaXZlcyBpbiB0aGUgc2VydmVyLXNpZGUgamFyIGFuZCBpcyBxdWlldGx5IHJlLWV4Y2hhbmdlZCB3aXRoIGEKLy8gZnJlc2ggbGF1bmNoIHRva2VuIHdoZW5ldmVyIGl0IGxhcHNlczsgdGhhdCByb3RhdGlvbiBpcyBpbnZpc2libGUgaGVyZS4KY29uc3QgQ09PS0lFX01BWF9BR0VfUyA9IDQwMCAqIDI0ICogNjAgKiA2MDsKY29uc3QgUkVORVdfQUZURVJfTVMgPSAyNCAqIDYwICogNjAgKiAxMDAwOwpjb25zdCBTVUJUSVRMRSA9IHByb2Nlc3MuZW52LkdBVEVfU1VCVElUTEUgfHwgJ3NpZ24gaW4gdG8gY29udGludWUnOwovLyBBdXRoIG1vZGVzOgovLyAgLSBkZWZhdWx0ICh0aGUgb3JpZ2luYWwgVk0gaW5zdGFsbCk6IHVzZXJuYW1lICsgcGFzc3dvcmQsIHRoZSBjcmVkZW50aWFsCi8vICAgIHJlY29yZCBpcyBtYW5hZ2VkIG91dC1vZi1iYW5kIChnYXRlLWluaXQgLyBkc2gtZ2F0ZS1zZXRwYXNzKS4KLy8gIC0gInBhc3N3b3JkLW9ubHkiICh0aGUgVW1icmVsIGFwcCk6IG5vIHVzZXJuYW1lIGFueXdoZXJlLCBhbmQgd2hlbiBubwovLyAgICBjcmVkZW50aWFsIHJlY29yZCBleGlzdHMgeWV0IHRoZSBnYXRlIHNlcnZlcyBhIG9uZS10aW1lIHNldHVwIHBhZ2Ug4oCUCi8vICAgIHRoZSBmaXJzdCB2aXNpdG9yIGNyZWF0ZXMgdGhlIHBhc3N3b3JkLCBhbmQgdGhhdCBwYXNzd29yZCBpcyB0aGUKLy8gICAgc2lnbi1pbiBmcm9tIHRoZW4gb24uIE5vdGhpbmcgcGVyc29uYWwgc2hpcHMgaW4gdGhlIHBhY2thZ2UuCmNvbnN0IFBBU1NXT1JEX09OTFkgPSBwcm9jZXNzLmVudi5HQVRFX0FVVEhfTU9ERSA9PT0gJ3Bhc3N3b3JkLW9ubHknOwoKZnVuY3Rpb24gb3duSVB2NCgpIHsKICBjb25zdCBpZmFjZXMgPSBvcy5uZXR3b3JrSW50ZXJmYWNlcygpOwogIGZvciAoY29uc3QgbGlzdCBvZiBPYmplY3QudmFsdWVzKGlmYWNlcykpIHsKICAgIGZvciAoY29uc3QgYWRkciBvZiBsaXN0IHx8IFtdKSB7CiAgICAgIGlmIChhZGRyLmZhbWlseSA9PT0gJ0lQdjQnICYmICFhZGRyLmludGVybmFsKSByZXR1cm4gYWRkci5hZGRyZXNzOwogICAgfQogIH0KICByZXR1cm4gJzEyNy4wLjAuMSc7Cn0KLy8gVGhlIGdhdGUgYmluZHMgaXRzIE9XTiBhZGRyZXNzOyB0aGUgdXBzdHJlYW0gaXMgZHNoLCB3aGVyZXZlciBpdCBsaXZlczoKLy8gdGhlIHNhbWUgaG9zdCAoVk0gaW5zdGFsbCkgb3IgYSBjb21wb3NlIHNlcnZpY2UgbmFtZSAoVW1icmVsIGFwcCkuCmNvbnN0IEJJTkRfSE9TVCA9IG93bklQdjQoKTsKY29uc3QgVVBTVFJFQU1fSE9TVCA9IHByb2Nlc3MuZW52LkdBVEVfVVBTVFJFQU1fSE9TVCB8fCBCSU5EX0hPU1Q7CgovLyBUaGUgSG9zdCBhdXRob3JpdHkgcHJlc2VudGVkIHRvIGRzaC4gZHNoIHRydXN0cyB0aGUgYXV0aG9yaXR5IGl0IGJvdW5kLAovLyBzbyBwcmVzZW50IGRzaCdzIG93biBib3VuZCBhdXRob3JpdHksIHBhcnNlZCBmcm9tIHRoZSBjdXJyZW50IGxhdW5jaAovLyBsaW5rIOKAlCB0aGUgZ2F0ZSB0aGVuIHdvcmtzIGF0IGFueSBhZGRyZXNzIHRoZSBhcHAgaGFwcGVucyB0byBsYW5kIG9uLgovLyBHQVRFX0FVVEhPUklUWSBwaW5zIGEgc3RhdGljIHZhbHVlIHdoZXJlIHRoYXQgaXMgd2FudGVkICh0aGUgVk0gaW5zdGFsbAovLyBwYXNzZXMgaXRzIExBTiBhdXRob3JpdHkgZXhwbGljaXRseSkuCmNvbnN0IFNUQVRJQ19BVVRIT1JJVFkgPSBwcm9jZXNzLmVudi5HQVRFX0FVVEhPUklUWSB8fCAnJzsKZnVuY3Rpb24gYXV0aG9yaXR5KCkgewogIGlmIChTVEFUSUNfQVVUSE9SSVRZKSByZXR1cm4gU1RBVElDX0FVVEhPUklUWTsKICB0cnkgewogICAgY29uc3QgdGV4dCA9IGZzLnJlYWRGaWxlU3luYyhMSU5LX0ZJTEUsICd1dGY4JykudHJpbSgpOwogICAgcmV0dXJuIG5ldyBVUkwodGV4dC5zcGxpdCgvXHMrLykucG9wKCkpLmhvc3Q7CiAgfSBjYXRjaCB7CiAgICByZXR1cm4gYCR7VVBTVFJFQU1fSE9TVH06JHtVUFNUUkVBTV9QT1JUfWA7CiAgfQp9CgovLyAtLS0tLS0tLS0tIGNyZWRlbnRpYWwgcmVjb3JkIC0tLS0tLS0tLS0KZnVuY3Rpb24gbG9hZENvbmZpZygpIHsKICBjb25zdCByYXcgPSBmcy5yZWFkRmlsZVN5bmMoQ09ORklHX0ZJTEUsICd1dGY4Jyk7CiAgY29uc3QgcmVjID0gSlNPTi5wYXJzZShyYXcpOwogIGlmICghcmVjLnNhbHQgfHwgIXJlYy5kaWdlc3QgfHwgIXJlYy5zaWduaW5nKSB7CiAgICB0aHJvdyBuZXcgRXJyb3IoJ2dhdGUgY29uZmlnIGluY29tcGxldGUnKTsKICB9CiAgcmV0dXJuIHJlYzsKfQoKZnVuY3Rpb24gbWFrZVJlY29yZChwYXNzd29yZCwgdXNlcikgewogIGNvbnN0IHNhbHQgPSBjcnlwdG8ucmFuZG9tQnl0ZXMoMTYpLnRvU3RyaW5nKCdoZXgnKTsKICBjb25zdCByZWMgPSB7CiAgICBzYWx0LAogICAgZGlnZXN0OiBjcnlwdG8uc2NyeXB0U3luYyhwYXNzd29yZCwgc2FsdCwgNjQpLnRvU3RyaW5nKCdoZXgnKSwKICAgIHNpZ25pbmc6IGNyeXB0by5yYW5kb21CeXRlcygzMikudG9TdHJpbmcoJ2hleCcpLAogIH07CiAgaWYgKHVzZXIpIHJlYy51c2VyID0gdXNlcjsKICByZXR1cm4gcmVjOwp9CgpmdW5jdGlvbiB3cml0ZVJlY29yZChyZWMpIHsKICBmcy5ta2RpclN5bmMocGF0aC5kaXJuYW1lKENPTkZJR19GSUxFKSwgeyByZWN1cnNpdmU6IHRydWUsIG1vZGU6IDBvNzAwIH0pOwogIGZzLndyaXRlRmlsZVN5bmMoQ09ORklHX0ZJTEUsIEpTT04uc3RyaW5naWZ5KHJlYywgbnVsbCwgMiksIHsgbW9kZTogMG82MDAgfSk7Cn0KCi8vIE9wdGlvbmFsIGJvb3RzdHJhcDogaWYgR0FURV9TRUVEX1BBU1NXT1JEIGlzIHNldCBhbmQgbm8gcmVjb3JkIGV4aXN0cywKLy8gc2VlZCB0aGUgcmVjb3JkIGZyb20gaXQuIFRoZSBVbWJyZWwgYXBwIGRvZXMgTk9UIHVzZSB0aGlzIChpdHMgZmlyc3QtcnVuCi8vIHNldHVwIHBhZ2UgcmVwbGFjZWQgaXQpOyBpdCByZW1haW5zIGZvciBzY3JpcHRlZCBpbnN0YWxscy4KZnVuY3Rpb24gc2VlZENvbmZpZ0lmTmVlZGVkKCkgewogIGlmIChmcy5leGlzdHNTeW5jKENPTkZJR19GSUxFKSkgcmV0dXJuOwogIGNvbnN0IHNlZWQgPSBwcm9jZXNzLmVudi5HQVRFX1NFRURfUEFTU1dPUkQgfHwgJyc7CiAgaWYgKCFzZWVkKSByZXR1cm47CiAgY29uc3QgdXNlciA9IHByb2Nlc3MuZW52LkdBVEVfVVNFUiB8fCAnYWRtaW4nOwogIHdyaXRlUmVjb3JkKG1ha2VSZWNvcmQoc2VlZCwgUEFTU1dPUkRfT05MWSA/IHVuZGVmaW5lZCA6IHVzZXIpKTsKICBjb25zb2xlLmxvZygnZHNoLWdhdGU6IHNlZWRlZCBjcmVkZW50aWFsIHJlY29yZCBmcm9tIGVudmlyb25tZW50Jyk7Cn0Kc2VlZENvbmZpZ0lmTmVlZGVkKCk7Ci8vIE5vIHJlY29yZCBpcyBhIGxlZ2FsIHN0YXRlIE9OTFkgaW4gcGFzc3dvcmQtb25seSBtb2RlOiB0aGUgZ2F0ZSB0aGVuCi8vIHNlcnZlcyB0aGUgb25lLXRpbWUgc2V0dXAgcGFnZSB1bnRpbCB0aGUgZmlyc3QgcGFzc3dvcmQgaXMgY3JlYXRlZC4KLy8gQW55IG90aGVyIG1vZGUgZmFpbHMgbG91ZGx5IGhlcmUsIGFzIGl0IGFsd2F5cyBoYXMuCmxldCBjb25maWcgPSBudWxsOwppZiAoZnMuZXhpc3RzU3luYyhDT05GSUdfRklMRSkpIHsKICBjb25maWcgPSBsb2FkQ29uZmlnKCk7Cn0gZWxzZSBpZiAoIVBBU1NXT1JEX09OTFkpIHsKICBjb25maWcgPSBsb2FkQ29uZmlnKCk7Cn0KCmZ1bmN0aW9uIHBhc3N3b3JkTWF0Y2hlcyhjYW5kaWRhdGUpIHsKICBjb25zdCBkaWdlc3QgPSBjcnlwdG8uc2NyeXB0U3luYyhTdHJpbmcoY2FuZGlkYXRlKSwgY29uZmlnLnNhbHQsIDY0KTsKICBjb25zdCBleHBlY3RlZCA9IEJ1ZmZlci5mcm9tKGNvbmZpZy5kaWdlc3QsICdoZXgnKTsKICByZXR1cm4gZGlnZXN0Lmxlbmd0aCA9PT0gZXhwZWN0ZWQubGVuZ3RoICYmIGNyeXB0by50aW1pbmdTYWZlRXF1YWwoZGlnZXN0LCBleHBlY3RlZCk7Cn0KCi8vIC0tLS0tLS0tLS0gZ2F0ZSBzZXNzaW9uIGNvb2tpZSAtLS0tLS0tLS0tCmZ1bmN0aW9uIHNpZ24ocGF5bG9hZEI2NCkgewogIHJldHVybiBjcnlwdG8uY3JlYXRlSG1hYygnc2hhMjU2JywgQnVmZmVyLmZyb20oY29uZmlnLnNpZ25pbmcsICdoZXgnKSkKICAgIC51cGRhdGUocGF5bG9hZEI2NCkuZGlnZXN0KCdiYXNlNjR1cmwnKTsKfQpmdW5jdGlvbiBzZXNzaW9uVXNlcigpIHsKICByZXR1cm4gKGNvbmZpZyAmJiBjb25maWcudXNlcikgfHwgJyhwYXNzd29yZC1vbmx5KSc7Cn0KZnVuY3Rpb24gbWFrZVNlc3Npb25Db29raWUoKSB7CiAgY29uc3QgcGF5bG9hZCA9IHt9OwogIHBheWxvYWQudSA9IHNlc3Npb25Vc2VyKCk7CiAgcGF5bG9hZC5pYXQgPSBEYXRlLm5vdygpOwogIGNvbnN0IGI2NCA9IEJ1ZmZlci5mcm9tKEpTT04uc3RyaW5naWZ5KHBheWxvYWQpLCAndXRmOCcpLnRvU3RyaW5nKCdiYXNlNjR1cmwnKTsKICByZXR1cm4gYCR7Q09PS0lFX05BTUV9PSR7YjY0fS4ke3NpZ24oYjY0KX07IE1heC1BZ2U9JHtDT09LSUVfTUFYX0FHRV9TfTsgUGF0aD0vOyBIdHRwT25seTsgU2FtZVNpdGU9U3RyaWN0YDsKfQpmdW5jdGlvbiBzZXNzaW9uUGF5bG9hZChyZXEpIHsKICBjb25zdCBoZWFkZXIgPSByZXEuaGVhZGVycy5jb29raWUgfHwgJyc7CiAgZm9yIChjb25zdCBwYXJ0IG9mIGhlYWRlci5zcGxpdCgnOycpKSB7CiAgICBjb25zdCBlcSA9IHBhcnQuaW5kZXhPZignPScpOwogICAgaWYgKGVxIDwgMCkgY29udGludWU7CiAgICBpZiAocGFydC5zbGljZSgwLCBlcSkudHJpbSgpICE9PSBDT09LSUVfTkFNRSkgY29udGludWU7CiAgICBjb25zdCB2YWx1ZSA9IHBhcnQuc2xpY2UoZXEgKyAxKS50cmltKCk7CiAgICBjb25zdCBkb3QgPSB2YWx1ZS5sYXN0SW5kZXhPZignLicpOwogICAgaWYgKGRvdCA8IDApIHJldHVybiBudWxsOwogICAgY29uc3QgYjY0ID0gdmFsdWUuc2xpY2UoMCwgZG90KTsKICAgIGNvbnN0IHNpZyA9IHZhbHVlLnNsaWNlKGRvdCArIDEpOwogICAgY29uc3QgZXhwZWN0ZWQgPSBzaWduKGI2NCk7CiAgICBjb25zdCBhID0gQnVmZmVyLmZyb20oc2lnKTsKICAgIGNvbnN0IGIgPSBCdWZmZXIuZnJvbShleHBlY3RlZCk7CiAgICBpZiAoYS5sZW5ndGggIT09IGIubGVuZ3RoIHx8ICFjcnlwdG8udGltaW5nU2FmZUVxdWFsKGEsIGIpKSByZXR1cm4gbnVsbDsKICAgIHRyeSB7CiAgICAgIGNvbnN0IHBheWxvYWQgPSBKU09OLnBhcnNlKEJ1ZmZlci5mcm9tKGI2NCwgJ2Jhc2U2NHVybCcpLnRvU3RyaW5nKCd1dGY4JykpOwogICAgICByZXR1cm4gcGF5bG9hZC51ID09PSBzZXNzaW9uVXNlcigpID8gcGF5bG9hZCA6IG51bGw7CiAgICB9IGNhdGNoIHsKICAgICAgcmV0dXJuIG51bGw7CiAgICB9CiAgfQogIHJldHVybiBudWxsOwp9CmZ1bmN0aW9uIHNlc3Npb25WYWxpZChyZXEpIHsKICByZXR1cm4gc2Vzc2lvblBheWxvYWQocmVxKSAhPT0gbnVsbDsKfQpmdW5jdGlvbiBzZXNzaW9uQWdlTXMocmVxKSB7CiAgY29uc3QgcGF5bG9hZCA9IHNlc3Npb25QYXlsb2FkKHJlcSk7CiAgaWYgKCFwYXlsb2FkIHx8IHR5cGVvZiBwYXlsb2FkLmlhdCAhPT0gJ251bWJlcicpIHJldHVybiBJbmZpbml0eTsKICByZXR1cm4gRGF0ZS5ub3coKSAtIHBheWxvYWQuaWF0Owp9CgovLyAtLS0tLS0tLS0tIGRzaCB0b2tlbiBleGNoYW5nZSAoc2VydmVyLXNpZGUgamFyKSAtLS0tLS0tLS0tCmxldCBkc2hKYXIgPSAnJzsgICAgICAgICAgLy8gIm5hbWU9dmFsdWU7IG5hbWU9dmFsdWUiIGZvciB1cHN0cmVhbSByZXF1ZXN0cwpsZXQgZXhjaGFuZ2VJbkZsaWdodCA9IG51bGw7CgpmdW5jdGlvbiBjdXJyZW50VG9rZW4oKSB7CiAgdHJ5IHsKICAgIGNvbnN0IHRleHQgPSBmcy5yZWFkRmlsZVN5bmMoTElOS19GSUxFLCAndXRmOCcpLnRyaW0oKTsKICAgIGNvbnN0IHVybCA9IG5ldyBVUkwodGV4dC5zcGxpdCgvXHMrLykucG9wKCkpOwogICAgcmV0dXJuIHVybC5zZWFyY2hQYXJhbXMuZ2V0KCd0b2tlbicpIHx8ICcnOwogIH0gY2F0Y2ggewogICAgcmV0dXJuICcnOwogIH0KfQoKZnVuY3Rpb24gZXhjaGFuZ2UoKSB7CiAgaWYgKGV4Y2hhbmdlSW5GbGlnaHQpIHJldHVybiBleGNoYW5nZUluRmxpZ2h0OwogIGV4Y2hhbmdlSW5GbGlnaHQgPSBuZXcgUHJvbWlzZSgocmVzb2x2ZSkgPT4gewogICAgY29uc3QgdG9rZW4gPSBjdXJyZW50VG9rZW4oKTsKICAgIGlmICghdG9rZW4pIHsgcmVzb2x2ZShmYWxzZSk7IHJldHVybjsgfQogICAgY29uc3QgcmVxID0gaHR0cC5yZXF1ZXN0KHsKICAgICAgaG9zdDogVVBTVFJFQU1fSE9TVCwgcG9ydDogVVBTVFJFQU1fUE9SVCwgbWV0aG9kOiAnR0VUJywKICAgICAgcGF0aDogYC8/dG9rZW49JHtlbmNvZGVVUklDb21wb25lbnQodG9rZW4pfWAsCiAgICAgIGhlYWRlcnM6IHsgSG9zdDogYXV0aG9yaXR5KCkgfSwKICAgIH0sIChyZXMpID0+IHsKICAgICAgcmVzLnJlc3VtZSgpOwogICAgICByZXMub24oJ2VuZCcsICgpID0+IHsKICAgICAgICBjb25zdCBzZXRDb29raWVzID0gcmVzLmhlYWRlcnNbJ3NldC1jb29raWUnXSB8fCBbXTsKICAgICAgICBpZiAoc2V0Q29va2llcy5sZW5ndGggPiAwKSB7CiAgICAgICAgICBkc2hKYXIgPSBzZXRDb29raWVzLm1hcCgoYykgPT4gYy5zcGxpdCgnOycpWzBdLnRyaW0oKSkuam9pbignOyAnKTsKICAgICAgICAgIHJlc29sdmUodHJ1ZSk7CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgIHJlc29sdmUoZmFsc2UpOwogICAgICAgIH0KICAgICAgfSk7CiAgICB9KTsKICAgIHJlcS5vbignZXJyb3InLCAoKSA9PiByZXNvbHZlKGZhbHNlKSk7CiAgICByZXEuc2V0VGltZW91dCg4MDAwLCAoKSA9PiB7IHJlcS5kZXN0cm95KCk7IHJlc29sdmUoZmFsc2UpOyB9KTsKICAgIHJlcS5lbmQoKTsKICB9KS5maW5hbGx5KCgpID0+IHsgZXhjaGFuZ2VJbkZsaWdodCA9IG51bGw7IH0pOwogIHJldHVybiBleGNoYW5nZUluRmxpZ2h0Owp9CgovLyAtLS0tLS0tLS0tIGxvZ2luIHJhdGUgbGltaXRpbmcgLS0tLS0tLS0tLQpjb25zdCBmYWlsdXJlcyA9IG5ldyBNYXAoKTsgLy8gaXAgLT4ge2NvdW50LCBmaXJzdEF0fQpmdW5jdGlvbiByYXRlTGltaXRlZChpcCkgewogIGNvbnN0IHJlYyA9IGZhaWx1cmVzLmdldChpcCk7CiAgaWYgKCFyZWMpIHJldHVybiBmYWxzZTsKICBpZiAoRGF0ZS5ub3coKSAtIHJlYy5maXJzdEF0ID4gNSAqIDYwICogMTAwMCkgeyBmYWlsdXJlcy5kZWxldGUoaXApOyByZXR1cm4gZmFsc2U7IH0KICByZXR1cm4gcmVjLmNvdW50ID49IDU7Cn0KZnVuY3Rpb24gcmVjb3JkRmFpbHVyZShpcCkgewogIGNvbnN0IHJlYyA9IGZhaWx1cmVzLmdldChpcCk7CiAgaWYgKCFyZWMgfHwgRGF0ZS5ub3coKSAtIHJlYy5maXJzdEF0ID4gNSAqIDYwICogMTAwMCkgewogICAgZmFpbHVyZXMuc2V0KGlwLCB7IGNvdW50OiAxLCBmaXJzdEF0OiBEYXRlLm5vdygpIH0pOwogIH0gZWxzZSB7CiAgICByZWMuY291bnQgKz0gMTsKICB9Cn0KCi8vIC0tLS0tLS0tLS0gbG9naW4gJiBzZXR1cCBwYWdlcyAtLS0tLS0tLS0tCmNvbnN0IFBBR0VfU1RZTEUgPSBgCiAgYm9keSB7IG1hcmdpbjowOyBtaW4taGVpZ2h0OjEwMHZoOyBkaXNwbGF5OmZsZXg7IGFsaWduLWl0ZW1zOmNlbnRlcjsganVzdGlmeS1jb250ZW50OmNlbnRlcjsKICAgIGJhY2tncm91bmQ6IzBiMGUxNDsgY29sb3I6I2U2ZTllZTsgZm9udC1mYW1pbHk6c3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBTZWdvZSBVSSwgUm9ib3RvLCBzYW5zLXNlcmlmOyB9CiAgLmNhcmQgeyB3aWR0aDptaW4oOTJ2dywgMzQwcHgpOyBiYWNrZ3JvdW5kOiMxMjE2MWY7IGJvcmRlcjoxcHggc29saWQgIzIzMmEzODsgYm9yZGVyLXJhZGl1czoxNHB4OwogICAgcGFkZGluZzoyOHB4IDI2cHggMjJweDsgYm94LXNoYWRvdzowIDEycHggNDBweCByZ2JhKDAsMCwwLC40NSk7IH0KICBoMSB7IGZvbnQtc2l6ZToxOXB4OyBtYXJnaW46MCAwIDRweDsgZm9udC13ZWlnaHQ6NjUwOyB9CiAgLnN1YiB7IGNvbG9yOiM4Yjk0YTU7IGZvbnQtc2l6ZToxM3B4OyBtYXJnaW46MCAwIDIwcHg7IH0KICBsYWJlbCB7IGRpc3BsYXk6YmxvY2s7IGZvbnQtc2l6ZToxMi41cHg7IGNvbG9yOiNhYWIzYzI7IG1hcmdpbjoxNHB4IDAgNnB4OyB9CiAgaW5wdXQgeyB3aWR0aDoxMDAlOyBib3gtc2l6aW5nOmJvcmRlci1ib3g7IHBhZGRpbmc6MTBweCAxMnB4OyBib3JkZXItcmFkaXVzOjlweDsgYm9yZGVyOjFweCBzb2xpZCAjMmIzNDQ2OwogICAgYmFja2dyb3VuZDojMGQxMTE5OyBjb2xvcjojZTZlOWVlOyBmb250LXNpemU6MTVweDsgb3V0bGluZTpub25lOyB9CiAgaW5wdXQ6Zm9jdXMgeyBib3JkZXItY29sb3I6IzRkN2NmZjsgfQogIGJ1dHRvbiB7IHdpZHRoOjEwMCU7IG1hcmdpbi10b3A6MjBweDsgcGFkZGluZzoxMXB4OyBib3JkZXI6MDsgYm9yZGVyLXJhZGl1czo5cHg7IGN1cnNvcjpwb2ludGVyOwogICAgYmFja2dyb3VuZDojNGQ3Y2ZmOyBjb2xvcjojZmZmOyBmb250LXNpemU6MTVweDsgZm9udC13ZWlnaHQ6NjAwOyB9CiAgYnV0dG9uOmhvdmVyIHsgYmFja2dyb3VuZDojM2Y2ZmU4OyB9CiAgLmVyciB7IGJhY2tncm91bmQ6IzNhMTYyMDsgYm9yZGVyOjFweCBzb2xpZCAjNmUyNDM2OyBjb2xvcjojZmY5ZGIwOyBib3JkZXItcmFkaXVzOjlweDsKICAgIHBhZGRpbmc6OXB4IDEycHg7IGZvbnQtc2l6ZToxM3B4OyBtYXJnaW46MCAwIDZweDsgfQogIC5mb290IHsgY29sb3I6IzVkNjY3NTsgZm9udC1zaXplOjExLjVweDsgdGV4dC1hbGlnbjpjZW50ZXI7IG1hcmdpbjoxNnB4IDAgMDsgfWA7CgpmdW5jdGlvbiBsb2dpblBhZ2UoZXJyb3IpIHsKICBjb25zdCBlcnJIdG1sID0gZXJyb3IgPyBgPHAgY2xhc3M9ImVyciI+JHtlcnJvcn08L3A+YCA6ICcnOwogIGNvbnN0IHVzZXJIdG1sID0gUEFTU1dPUkRfT05MWSA/ICcnIDogYAogIDxsYWJlbCBmb3I9InUiPlVzZXJuYW1lPC9sYWJlbD4KICA8aW5wdXQgaWQ9InUiIG5hbWU9InVzZXJuYW1lIiBhdXRvY29tcGxldGU9InVzZXJuYW1lIiB2YWx1ZT0iJHtjb25maWcudXNlcn0iIHJlcXVpcmVkPmA7CiAgcmV0dXJuIGA8IWRvY3R5cGUgaHRtbD4KPGh0bWwgbGFuZz0iZW4iPjxoZWFkPjxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xIj4KPHRpdGxlPkRlZXBTZWVrIEhhcm5lc3Mg4oCUIFNpZ24gaW48L3RpdGxlPgo8c3R5bGU+JHtQQUdFX1NUWUxFfQo8L3N0eWxlPjwvaGVhZD4KPGJvZHk+PGZvcm0gY2xhc3M9ImNhcmQiIG1ldGhvZD0icG9zdCIgYWN0aW9uPSIvX19nYXRlL2xvZ2luIj4KICA8aDE+RGVlcFNlZWsgSGFybmVzczwvaDE+CiAgPHAgY2xhc3M9InN1YiI+JHtTVUJUSVRMRX08L3A+CiAgJHtlcnJIdG1sfSR7dXNlckh0bWx9CiAgPGxhYmVsIGZvcj0icCI+UGFzc3dvcmQ8L2xhYmVsPgogIDxpbnB1dCBpZD0icCIgbmFtZT0icGFzc3dvcmQiIHR5cGU9InBhc3N3b3JkIiBhdXRvY29tcGxldGU9ImN1cnJlbnQtcGFzc3dvcmQiIGF1dG9mb2N1cyByZXF1aXJlZD4KICA8YnV0dG9uIHR5cGU9InN1Ym1pdCI+U2lnbiBpbjwvYnV0dG9uPgogIDxwIGNsYXNzPSJmb290Ij5Gcm9udCBkb29yIGJ5IE5lbGwg4pyoIOKAlCBkc2ggaXRzZWxmIGlzIHVudG91Y2hlZDwvcD4KPC9mb3JtPjwvYm9keT48L2h0bWw+YDsKfQoKLy8gT25lLXRpbWUgc2V0dXAsIHNlcnZlZCBvbmx5IGluIHBhc3N3b3JkLW9ubHkgbW9kZSB3aGlsZSBubyBjcmVkZW50aWFsCi8vIHJlY29yZCBleGlzdHMuIFRoZSBmaXJzdCB2aXNpdG9yIGNyZWF0ZXMgdGhlIHBhc3N3b3JkOyB0aGUgcGFnZSB0aGVuCi8vIGNsb3NlcyBmb3JldmVyICh0aGUgcmVjb3JkIGV4aXN0aW5nIGlzIHdoYXQgY2xvc2VzIGl0KS4KZnVuY3Rpb24gc2V0dXBQYWdlKGVycm9yKSB7CiAgY29uc3QgZXJySHRtbCA9IGVycm9yID8gYDxwIGNsYXNzPSJlcnIiPiR7ZXJyb3J9PC9wPmAgOiAnJzsKICByZXR1cm4gYDwhZG9jdHlwZSBodG1sPgo8aHRtbCBsYW5nPSJlbiI+PGhlYWQ+PG1ldGEgY2hhcnNldD0idXRmLTgiPgo8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEiPgo8dGl0bGU+RGVlcFNlZWsgSGFybmVzcyDigJQgU2V0IHVwPC90aXRsZT4KPHN0eWxlPiR7UEFHRV9TVFlMRX0KPC9zdHlsZT48L2hlYWQ+Cjxib2R5Pjxmb3JtIGNsYXNzPSJjYXJkIiBtZXRob2Q9InBvc3QiIGFjdGlvbj0iL19fZ2F0ZS9zZXR1cCI+CiAgPGgxPkRlZXBTZWVrIEhhcm5lc3M8L2gxPgogIDxwIGNsYXNzPSJzdWIiPldlbGNvbWUg4oCUIGZpcnN0IHNpZ24taW4uIENyZWF0ZSB0aGUgcGFzc3dvcmQgZm9yIHRoaXMgaGFybmVzczsgeW91J2xsIHVzZSBpdCBldmVyeSB0aW1lIGFmdGVyIHRoaXMuPC9wPgogICR7ZXJySHRtbH0KICA8bGFiZWwgZm9yPSJwIj5OZXcgcGFzc3dvcmQgKGF0IGxlYXN0IDEwIGNoYXJhY3RlcnMpPC9sYWJlbD4KICA8aW5wdXQgaWQ9InAiIG5hbWU9InBhc3N3b3JkIiB0eXBlPSJwYXNzd29yZCIgYXV0b2NvbXBsZXRlPSJuZXctcGFzc3dvcmQiIGF1dG9mb2N1cyByZXF1aXJlZD4KICA8bGFiZWwgZm9yPSJwMiI+Q29uZmlybSBwYXNzd29yZDwvbGFiZWw+CiAgPGlucHV0IGlkPSJwMiIgbmFtZT0iY29uZmlybSIgdHlwZT0icGFzc3dvcmQiIGF1dG9jb21wbGV0ZT0ibmV3LXBhc3N3b3JkIiByZXF1aXJlZD4KICA8YnV0dG9uIHR5cGU9InN1Ym1pdCI+Q3JlYXRlIHBhc3N3b3JkICZhbXA7IHNpZ24gaW48L2J1dHRvbj4KICA8cCBjbGFzcz0iZm9vdCI+RnJvbnQgZG9vciBieSBOZWxsIOKcqCDigJQgZHNoIGl0c2VsZiBpcyB1bnRvdWNoZWQ8L3A+CjwvZm9ybT48L2JvZHk+PC9odG1sPmA7Cn0KCi8vIC0tLS0tLS0tLS0gcHJveHlpbmcgLS0tLS0tLS0tLQpmdW5jdGlvbiB1cHN0cmVhbUhlYWRlcnMocmVxKSB7CiAgY29uc3QgaGVhZGVycyA9IHt9OwogIGZvciAoY29uc3QgW2ssIHZdIG9mIE9iamVjdC5lbnRyaWVzKHJlcS5oZWFkZXJzKSkgewogICAgaWYgKGsgPT09ICdob3N0JyB8fCBrID09PSAnY29va2llJyB8fCBrID09PSAnY29ubmVjdGlvbicpIGNvbnRpbnVlOwogICAgaGVhZGVyc1trXSA9IHY7CiAgfQogIGhlYWRlcnMuaG9zdCA9IGF1dGhvcml0eSgpOwogIGNvbnN0IGNvb2tpZXMgPSBbXTsKICBpZiAoZHNoSmFyKSBjb29raWVzLnB1c2goZHNoSmFyKTsKICBjb25zdCByYXcgPSByZXEuaGVhZGVycy5jb29raWUgfHwgJyc7CiAgZm9yIChjb25zdCBwYXJ0IG9mIHJhdy5zcGxpdCgnOycpKSB7CiAgICBjb25zdCBuYW1lID0gcGFydC5zcGxpdCgnPScpWzBdLnRyaW0oKTsKICAgIGlmIChuYW1lICYmIG5hbWUgIT09IENPT0tJRV9OQU1FKSBjb29raWVzLnB1c2gocGFydC50cmltKCkpOwogIH0KICBpZiAoY29va2llcy5sZW5ndGgpIGhlYWRlcnMuY29va2llID0gY29va2llcy5qb2luKCc7ICcpOwogIHJldHVybiBoZWFkZXJzOwp9CgpmdW5jdGlvbiBwcm94eShyZXEsIHJlcywgcmV0cmllZCkgewogIGNvbnN0IG9wdHMgPSB7CiAgICBob3N0OiBVUFNUUkVBTV9IT1NULCBwb3J0OiBVUFNUUkVBTV9QT1JULAogICAgbWV0aG9kOiByZXEubWV0aG9kLCBwYXRoOiByZXEudXJsLCBoZWFkZXJzOiB1cHN0cmVhbUhlYWRlcnMocmVxKSwKICB9OwogIGNvbnN0IHVwID0gaHR0cC5yZXF1ZXN0KG9wdHMsICh1cFJlcykgPT4gewogICAgaWYgKHVwUmVzLnN0YXR1c0NvZGUgPT09IDQwMSAmJiAhcmV0cmllZCAmJiAocmVxLm1ldGhvZCA9PT0gJ0dFVCcgfHwgcmVxLm1ldGhvZCA9PT0gJ0hFQUQnKSkgewogICAgICB1cFJlcy5yZXN1bWUoKTsKICAgICAgZXhjaGFuZ2UoKS50aGVuKCgpID0+IHByb3h5KHJlcSwgcmVzLCB0cnVlKSk7CiAgICAgIHJldHVybjsKICAgIH0KICAgIGlmICh1cFJlcy5zdGF0dXNDb2RlID09PSA0MDEpIGV4Y2hhbmdlKCk7IC8vIHJlZnJlc2ggamFyIGZvciBuZXh0IHRpbWUKICAgIGNvbnN0IGhlYWRlcnMgPSB7IC4uLnVwUmVzLmhlYWRlcnMgfTsKICAgIGlmIChzZXNzaW9uQWdlTXMocmVxKSA+IFJFTkVXX0FGVEVSX01TKSB7CiAgICAgIC8vIFNsaWRpbmcgcmVuZXdhbDogcXVpZXRseSBleHRlbmQgdGhlIG5ldmVyLWV4cGlyaW5nIHNlc3Npb24gc28gdGhlCiAgICAgIC8vIGJyb3dzZXIncyA0MDAtZGF5IGNvb2tpZSBjYXAgbmV2ZXIgYWN0dWFsbHkgc2lnbnMgdGhlIHVzZXIgb3V0LgogICAgICBjb25zdCBleGlzdGluZyA9IHVwUmVzLmhlYWRlcnNbJ3NldC1jb29raWUnXTsKICAgICAgY29uc3QgbWVyZ2VkID0gZXhpc3RpbmcgPyAoQXJyYXkuaXNBcnJheShleGlzdGluZykgPyBleGlzdGluZyA6IFtleGlzdGluZ10pIDogW107CiAgICAgIGhlYWRlcnNbJ3NldC1jb29raWUnXSA9IFsuLi5tZXJnZWQsIG1ha2VTZXNzaW9uQ29va2llKCldOwogICAgfQogICAgcmVzLndyaXRlSGVhZCh1cFJlcy5zdGF0dXNDb2RlLCBoZWFkZXJzKTsKICAgIHVwUmVzLnBpcGUocmVzKTsKICB9KTsKICB1cC5vbignZXJyb3InLCAoKSA9PiB7CiAgICBpZiAoIXJlcy5oZWFkZXJzU2VudCkgeyByZXMud3JpdGVIZWFkKDUwMiwgeyAnY29udGVudC10eXBlJzogJ3RleHQvcGxhaW4nIH0pOyB9CiAgICByZXMuZW5kKCdnYXRlOiBkc2ggaXMgbm90IHJlYWNoYWJsZSByaWdodCBub3cnKTsKICB9KTsKICByZXEucGlwZSh1cCk7Cn0KCi8vIC0tLS0tLS0tLS0gc2VydmVyIC0tLS0tLS0tLS0KY29uc3Qgc2VydmVyID0gaHR0cC5jcmVhdGVTZXJ2ZXIoKHJlcSwgcmVzKSA9PiB7CiAgY29uc3QgdXJsID0gbmV3IFVSTChyZXEudXJsLCAnaHR0cDovL2dhdGUubG9jYWwnKTsKCiAgaWYgKHVybC5wYXRobmFtZSA9PT0gJy9fX2dhdGUvaGVhbHRoJykgewogICAgcmVzLndyaXRlSGVhZCgyMDAsIHsgJ2NvbnRlbnQtdHlwZSc6ICd0ZXh0L3BsYWluJyB9KTsKICAgIHJlcy5lbmQoJ29rJyk7CiAgICByZXR1cm47CiAgfQoKICAvLyAtLS0tLSBzZXR1cCBzdGF0ZTogcGFzc3dvcmQtb25seSBtb2RlIHdpdGggbm8gY3JlZGVudGlhbCByZWNvcmQgeWV0LgogIC8vIEV2ZXJ5dGhpbmcgZnVubmVscyB0byB0aGUgb25lLXRpbWUgc2V0dXAgcGFnZSB1bnRpbCBhIHBhc3N3b3JkIGV4aXN0cy4KICBpZiAoIWNvbmZpZykgewogICAgaWYgKHVybC5wYXRobmFtZSA9PT0gJy9fX2dhdGUvc2V0dXAnICYmIHJlcS5tZXRob2QgPT09ICdHRVQnKSB7CiAgICAgIHJlcy53cml0ZUhlYWQoMjAwLCB7ICdjb250ZW50LXR5cGUnOiAndGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04JywgJ2NhY2hlLWNvbnRyb2wnOiAnbm8tc3RvcmUnIH0pOwogICAgICByZXMuZW5kKHNldHVwUGFnZSgnJykpOwogICAgICByZXR1cm47CiAgICB9CiAgICBpZiAodXJsLnBhdGhuYW1lID09PSAnL19fZ2F0ZS9zZXR1cCcgJiYgcmVxLm1ldGhvZCA9PT0gJ1BPU1QnKSB7CiAgICAgIGNvbnN0IGlwID0gcmVxLnNvY2tldC5yZW1vdGVBZGRyZXNzIHx8ICd1bmtub3duJzsKICAgICAgaWYgKHJhdGVMaW1pdGVkKGlwKSkgewogICAgICAgIHJlcy53cml0ZUhlYWQoNDI5LCB7ICdjb250ZW50LXR5cGUnOiAndGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04JywgJ2NhY2hlLWNvbnRyb2wnOiAnbm8tc3RvcmUnIH0pOwogICAgICAgIHJlcy5lbmQoc2V0dXBQYWdlKCdUb28gbWFueSBhdHRlbXB0cyDigJQgd2FpdCBhIGZldyBtaW51dGVzIGFuZCB0cnkgYWdhaW4uJykpOwogICAgICAgIHJldHVybjsKICAgICAgfQogICAgICBsZXQgYm9keSA9ICcnOwogICAgICByZXEub24oJ2RhdGEnLCAoY2h1bmspID0+IHsKICAgICAgICBib2R5ICs9IGNodW5rOwogICAgICAgIGlmIChib2R5Lmxlbmd0aCA+IDE2Mzg0KSByZXEuZGVzdHJveSgpOwogICAgICB9KTsKICAgICAgcmVxLm9uKCdlbmQnLCAoKSA9PiB7CiAgICAgICAgY29uc3QgZm9ybSA9IG5ldyBVUkxTZWFyY2hQYXJhbXMoYm9keSk7CiAgICAgICAgY29uc3QgcHcgPSBmb3JtLmdldCgncGFzc3dvcmQnKSB8fCAnJzsKICAgICAgICBjb25zdCBjb25maXJtID0gZm9ybS5nZXQoJ2NvbmZpcm0nKSB8fCAnJzsKICAgICAgICBpZiAocHcubGVuZ3RoIDwgMTApIHsKICAgICAgICAgIHJlY29yZEZhaWx1cmUoaXApOwogICAgICAgICAgcmVzLndyaXRlSGVhZCg0MDAsIHsgJ2NvbnRlbnQtdHlwZSc6ICd0ZXh0L2h0bWw7IGNoYXJzZXQ9dXRmLTgnLCAnY2FjaGUtY29udHJvbCc6ICduby1zdG9yZScgfSk7CiAgICAgICAgICByZXMuZW5kKHNldHVwUGFnZSgnUGFzc3dvcmQgbmVlZHMgYXQgbGVhc3QgMTAgY2hhcmFjdGVycy4nKSk7CiAgICAgICAgICByZXR1cm47CiAgICAgICAgfQogICAgICAgIGlmIChwdyAhPT0gY29uZmlybSkgewogICAgICAgICAgcmVjb3JkRmFpbHVyZShpcCk7CiAgICAgICAgICByZXMud3JpdGVIZWFkKDQwMCwgeyAnY29udGVudC10eXBlJzogJ3RleHQvaHRtbDsgY2hhcnNldD11dGYtOCcsICdjYWNoZS1jb250cm9sJzogJ25vLXN0b3JlJyB9KTsKICAgICAgICAgIHJlcy5lbmQoc2V0dXBQYWdlKCdUaG9zZSBwYXNzd29yZHMgZG8gbm90IG1hdGNoLicpKTsKICAgICAgICAgIHJldHVybjsKICAgICAgICB9CiAgICAgICAgY29uc3QgcmVjID0gbWFrZVJlY29yZChwdyk7CiAgICAgICAgd3JpdGVSZWNvcmQocmVjKTsKICAgICAgICBjb25maWcgPSByZWM7CiAgICAgICAgY29uc29sZS5sb2coJ2RzaC1nYXRlOiBwYXNzd29yZCBjcmVhdGVkIHZpYSBmaXJzdC1ydW4gc2V0dXAnKTsKICAgICAgICByZXMud3JpdGVIZWFkKDMwMiwgeyBMb2NhdGlvbjogJy8nLCAnU2V0LUNvb2tpZSc6IG1ha2VTZXNzaW9uQ29va2llKCkgfSk7CiAgICAgICAgcmVzLmVuZCgpOwogICAgICB9KTsKICAgICAgcmV0dXJuOwogICAgfQogICAgaWYgKHVybC5wYXRobmFtZS5zdGFydHNXaXRoKCcvYXBpJykpIHsKICAgICAgcmVzLndyaXRlSGVhZCg0MDEsIHsgJ2NvbnRlbnQtdHlwZSc6ICdhcHBsaWNhdGlvbi9qc29uJyB9KTsKICAgICAgcmVzLmVuZCgneyJlcnJvciI6ImdhdGUgc2V0dXAgcmVxdWlyZWQifScpOwogICAgfSBlbHNlIHsKICAgICAgcmVzLndyaXRlSGVhZCgzMDIsIHsgTG9jYXRpb246ICcvX19nYXRlL3NldHVwJyB9KTsKICAgICAgcmVzLmVuZCgpOwogICAgfQogICAgcmV0dXJuOwogIH0KCiAgLy8gU2V0dXAgY2xvc2VzIGZvcmV2ZXIgb25jZSBhIGNyZWRlbnRpYWwgcmVjb3JkIGV4aXN0cy4KICBpZiAodXJsLnBhdGhuYW1lID09PSAnL19fZ2F0ZS9zZXR1cCcpIHsKICAgIHJlcy53cml0ZUhlYWQoMzAyLCB7IExvY2F0aW9uOiAnL19fZ2F0ZS9sb2dpbicgfSk7CiAgICByZXMuZW5kKCk7CiAgICByZXR1cm47CiAgfQoKICBpZiAodXJsLnBhdGhuYW1lID09PSAnL19fZ2F0ZS9sb2dpbicgJiYgcmVxLm1ldGhvZCA9PT0gJ0dFVCcpIHsKICAgIHJlcy53cml0ZUhlYWQoMjAwLCB7ICdjb250ZW50LXR5cGUnOiAndGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04JywgJ2NhY2hlLWNvbnRyb2wnOiAnbm8tc3RvcmUnIH0pOwogICAgcmVzLmVuZChsb2dpblBhZ2UoJycpKTsKICAgIHJldHVybjsKICB9CgogIGlmICh1cmwucGF0aG5hbWUgPT09ICcvX19nYXRlL2xvZ2luJyAmJiByZXEubWV0aG9kID09PSAnUE9TVCcpIHsKICAgIGNvbnN0IGlwID0gcmVxLnNvY2tldC5yZW1vdGVBZGRyZXNzIHx8ICd1bmtub3duJzsKICAgIGlmIChyYXRlTGltaXRlZChpcCkpIHsKICAgICAgcmVzLndyaXRlSGVhZCg0MjksIHsgJ2NvbnRlbnQtdHlwZSc6ICd0ZXh0L2h0bWw7IGNoYXJzZXQ9dXRmLTgnLCAnY2FjaGUtY29udHJvbCc6ICduby1zdG9yZScgfSk7CiAgICAgIHJlcy5lbmQobG9naW5QYWdlKCdUb28gbWFueSBhdHRlbXB0cyDigJQgd2FpdCBhIGZldyBtaW51dGVzIGFuZCB0cnkgYWdhaW4uJykpOwogICAgICByZXR1cm47CiAgICB9CiAgICBsZXQgYm9keSA9ICcnOwogICAgcmVxLm9uKCdkYXRhJywgKGNodW5rKSA9PiB7CiAgICAgIGJvZHkgKz0gY2h1bms7CiAgICAgIGlmIChib2R5Lmxlbmd0aCA+IDE2Mzg0KSByZXEuZGVzdHJveSgpOwogICAgfSk7CiAgICByZXEub24oJ2VuZCcsICgpID0+IHsKICAgICAgY29uc3QgZm9ybSA9IG5ldyBVUkxTZWFyY2hQYXJhbXMoYm9keSk7CiAgICAgIGNvbnN0IHVzZXJPayA9IFBBU1NXT1JEX09OTFkgfHwgZm9ybS5nZXQoJ3VzZXJuYW1lJykgPT09IGNvbmZpZy51c2VyOwogICAgICBsZXQgcHdPayA9IGZhbHNlOwogICAgICB0cnkgeyBwd09rID0gcGFzc3dvcmRNYXRjaGVzKGZvcm0uZ2V0KCdwYXNzd29yZCcpIHx8ICcnKTsgfSBjYXRjaCB7IHB3T2sgPSBmYWxzZTsgfQogICAgICBpZiAodXNlck9rICYmIHB3T2spIHsKICAgICAgICBmYWlsdXJlcy5kZWxldGUoaXApOwogICAgICAgIHJlcy53cml0ZUhlYWQoMzAyLCB7IExvY2F0aW9uOiAnLycsICdTZXQtQ29va2llJzogbWFrZVNlc3Npb25Db29raWUoKSB9KTsKICAgICAgICByZXMuZW5kKCk7CiAgICAgIH0gZWxzZSB7CiAgICAgICAgcmVjb3JkRmFpbHVyZShpcCk7CiAgICAgICAgcmVzLndyaXRlSGVhZCg0MDEsIHsgJ2NvbnRlbnQtdHlwZSc6ICd0ZXh0L2h0bWw7IGNoYXJzZXQ9dXRmLTgnLCAnY2FjaGUtY29udHJvbCc6ICduby1zdG9yZScgfSk7CiAgICAgICAgcmVzLmVuZChsb2dpblBhZ2UoUEFTU1dPUkRfT05MWSA/ICdXcm9uZyBwYXNzd29yZC4nIDogJ1dyb25nIHVzZXJuYW1lIG9yIHBhc3N3b3JkLicpKTsKICAgICAgfQogICAgfSk7CiAgICByZXR1cm47CiAgfQoKICBpZiAodXJsLnBhdGhuYW1lID09PSAnL19fZ2F0ZS9sb2dvdXQnKSB7CiAgICByZXMud3JpdGVIZWFkKDMwMiwgewogICAgICBMb2NhdGlvbjogJy9fX2dhdGUvbG9naW4nLAogICAgICAnU2V0LUNvb2tpZSc6IGAke0NPT0tJRV9OQU1FfT07IE1heC1BZ2U9MDsgUGF0aD0vOyBIdHRwT25seTsgU2FtZVNpdGU9U3RyaWN0YCwKICAgIH0pOwogICAgcmVzLmVuZCgpOwogICAgcmV0dXJuOwogIH0KCiAgaWYgKHVybC5wYXRobmFtZS5zdGFydHNXaXRoKCcvX19nYXRlLycpKSB7CiAgICByZXMud3JpdGVIZWFkKDQwNCwgeyAnY29udGVudC10eXBlJzogJ3RleHQvcGxhaW4nIH0pOwogICAgcmVzLmVuZCgnbm90IGZvdW5kJyk7CiAgICByZXR1cm47CiAgfQoKICBpZiAoIXNlc3Npb25WYWxpZChyZXEpKSB7CiAgICBpZiAodXJsLnBhdGhuYW1lLnN0YXJ0c1dpdGgoJy9hcGknKSkgewogICAgICByZXMud3JpdGVIZWFkKDQwMSwgeyAnY29udGVudC10eXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nIH0pOwogICAgICByZXMuZW5kKCd7ImVycm9yIjoiZ2F0ZSBhdXRoZW50aWNhdGlvbiByZXF1aXJlZCJ9Jyk7CiAgICB9IGVsc2UgewogICAgICByZXMud3JpdGVIZWFkKDMwMiwgeyBMb2NhdGlvbjogJy9fX2dhdGUvbG9naW4nIH0pOwogICAgICByZXMuZW5kKCk7CiAgICB9CiAgICByZXR1cm47CiAgfQoKICBwcm94eShyZXEsIHJlcywgZmFsc2UpOwp9KTsKCnNlcnZlci5vbigndXBncmFkZScsIChyZXEsIHNvY2tldCwgaGVhZCkgPT4gewogIGlmICghY29uZmlnKSB7IHNvY2tldC5kZXN0cm95KCk7IHJldHVybjsgfQogIGlmICghc2Vzc2lvblZhbGlkKHJlcSkpIHsKICAgIHNvY2tldC53cml0ZSgnSFRUUC8xLjEgNDAxIFVuYXV0aG9yaXplZFxyXG5Db25uZWN0aW9uOiBjbG9zZVxyXG5cclxuJyk7CiAgICBzb2NrZXQuZGVzdHJveSgpOwogICAgcmV0dXJuOwogIH0KICBjb25zdCB1cHN0cmVhbSA9IG5ldC5jb25uZWN0KFVQU1RSRUFNX1BPUlQsIFVQU1RSRUFNX0hPU1QsICgpID0+IHsKICAgIGNvbnN0IGxpbmVzID0gW2Ake3JlcS5tZXRob2R9ICR7cmVxLnVybH0gSFRUUC8ke3JlcS5odHRwVmVyc2lvbn1gXTsKICAgIGNvbnN0IGhlYWRlcnMgPSB1cHN0cmVhbUhlYWRlcnMocmVxKTsKICAgIGhlYWRlcnMuY29ubmVjdGlvbiA9ICdVcGdyYWRlJzsKICAgIGlmIChyZXEuaGVhZGVycy51cGdyYWRlKSBoZWFkZXJzLnVwZ3JhZGUgPSByZXEuaGVhZGVycy51cGdyYWRlOwogICAgZm9yIChjb25zdCBbaywgdl0gb2YgT2JqZWN0LmVudHJpZXMoaGVhZGVycykpIGxpbmVzLnB1c2goYCR7a306ICR7dn1gKTsKICAgIHVwc3RyZWFtLndyaXRlKGxpbmVzLmpvaW4oJ1xyXG4nKSArICdcclxuXHJcbicpOwogICAgaWYgKGhlYWQgJiYgaGVhZC5sZW5ndGgpIHVwc3RyZWFtLndyaXRlKGhlYWQpOwogICAgdXBzdHJlYW0ucGlwZShzb2NrZXQpOwogICAgc29ja2V0LnBpcGUodXBzdHJlYW0pOwogIH0pOwogIHVwc3RyZWFtLm9uKCdlcnJvcicsICgpID0+IHNvY2tldC5kZXN0cm95KCkpOwogIHNvY2tldC5vbignZXJyb3InLCAoKSA9PiB1cHN0cmVhbS5kZXN0cm95KCkpOwp9KTsKCnNlcnZlci5saXN0ZW4oUE9SVCwgQklORF9IT1NULCAoKSA9PiB7CiAgY29uc29sZS5sb2coYGRzaC1nYXRlOiBsaXN0ZW5pbmcgb24gJHtCSU5EX0hPU1R9OiR7UE9SVH0sIHVwc3RyZWFtICR7VVBTVFJFQU1fSE9TVH06JHtVUFNUUkVBTV9QT1JUfSwgYXV0aG9yaXR5ICR7YXV0aG9yaXR5KCl9LCBhdXRoICR7UEFTU1dPUkRfT05MWSA/ICdwYXNzd29yZC1vbmx5JyA6ICd1c2VyK3Bhc3N3b3JkJ30ke2NvbmZpZyA/ICcnIDogJyAoc2V0dXAgcGVuZGluZyknfWApOwp9KTsK
+#!/usr/bin/env node
+// dsh-gate: a password front door for the DeepSeek Harness Web UI.
+// Zero dependencies (node:http only). Lives OUTSIDE the dsh npm package so
+// dsh updates never touch it. It depends only on dsh's public, browser-facing
+// behavior: the launch-token link (read from the link file, refreshed by
+// the harness launcher on every dsh start) and the cookie that exchange
+// mints.
+// The token is exchanged server-side and never appears in the browser.
+'use strict';
+
+const http = require('node:http');
+const net = require('node:net');
+const fs = require('node:fs');
+const os = require('node:os');
+const crypto = require('node:crypto');
+
+const path = require('node:path');
+const PORT = Number(process.env.GATE_PORT || 3081);
+const LINK_FILE = process.env.GATE_LINK_FILE || '/data/home/dsh-link.txt';
+const CONFIG_FILE = process.env.GATE_CONFIG || '/data/gate/gate.json';
+const UPSTREAM_PORT = Number(process.env.GATE_UPSTREAM_PORT || 3080);
+const COOKIE_NAME = 'dsh_gate';
+// The gate session never expires server-side: the user's password is the
+// credential, and the session it mints is permanent (logout or wiping the
+// credential record are the only ways out). Browsers cap cookie lifetime
+// (Chrome: 400 days), so the cookie carries the max allowed age and the
+// gate silently re-issues it on responses once it is a day old — in
+// practice the sign-in lasts forever. Behind the gate, dsh's own 30-day
+// cookie lives in the server-side jar and is quietly re-exchanged with a
+// fresh launch token whenever it lapses; that rotation is invisible here.
+const COOKIE_MAX_AGE_S = 400 * 24 * 60 * 60;
+const RENEW_AFTER_MS = 24 * 60 * 60 * 1000;
+const SUBTITLE = process.env.GATE_SUBTITLE || 'sign in to continue';
+// Auth modes:
+//  - default (the original VM install): username + password, the credential
+//    record is managed out-of-band (gate-init / dsh-gate-setpass).
+//  - "password-only" (the Umbrel app): no username anywhere, and when no
+//    credential record exists yet the gate serves a one-time setup page —
+//    the first visitor creates the password, and that password is the
+//    sign-in from then on. Nothing personal ships in the package.
+const PASSWORD_ONLY = process.env.GATE_AUTH_MODE === 'password-only';
+
+function ownIPv4() {
+  const ifaces = os.networkInterfaces();
+  for (const list of Object.values(ifaces)) {
+    for (const addr of list || []) {
+      if (addr.family === 'IPv4' && !addr.internal) return addr.address;
+    }
+  }
+  return '127.0.0.1';
+}
+// The gate binds its OWN address; the upstream is dsh, wherever it lives:
+// the same host (VM install) or a compose service name (Umbrel app).
+const BIND_HOST = ownIPv4();
+const UPSTREAM_HOST = process.env.GATE_UPSTREAM_HOST || BIND_HOST;
+
+// The Host authority presented to dsh. dsh trusts the authority it bound,
+// so present dsh's own bound authority, parsed from the current launch
+// link — the gate then works at any address the app happens to land on.
+// GATE_AUTHORITY pins a static value where that is wanted (the VM install
+// passes its LAN authority explicitly).
+const STATIC_AUTHORITY = process.env.GATE_AUTHORITY || '';
+function authority() {
+  if (STATIC_AUTHORITY) return STATIC_AUTHORITY;
+  try {
+    const text = fs.readFileSync(LINK_FILE, 'utf8').trim();
+    return new URL(text.split(/\s+/).pop()).host;
+  } catch {
+    return `${UPSTREAM_HOST}:${UPSTREAM_PORT}`;
+  }
+}
+
+// ---------- credential record ----------
+function loadConfig() {
+  const raw = fs.readFileSync(CONFIG_FILE, 'utf8');
+  const rec = JSON.parse(raw);
+  if (!rec.salt || !rec.digest || !rec.signing) {
+    throw new Error('gate config incomplete');
+  }
+  return rec;
+}
+
+function makeRecord(password, user) {
+  const salt = crypto.randomBytes(16).toString('hex');
+  const rec = {
+    salt,
+    digest: crypto.scryptSync(password, salt, 64).toString('hex'),
+    signing: crypto.randomBytes(32).toString('hex'),
+  };
+  if (user) rec.user = user;
+  return rec;
+}
+
+function writeRecord(rec) {
+  fs.mkdirSync(path.dirname(CONFIG_FILE), { recursive: true, mode: 0o700 });
+  fs.writeFileSync(CONFIG_FILE, JSON.stringify(rec, null, 2), { mode: 0o600 });
+}
+
+// Optional bootstrap: if GATE_SEED_PASSWORD is set and no record exists,
+// seed the record from it. The Umbrel app does NOT use this (its first-run
+// setup page replaced it); it remains for scripted installs.
+function seedConfigIfNeeded() {
+  if (fs.existsSync(CONFIG_FILE)) return;
+  const seed = process.env.GATE_SEED_PASSWORD || '';
+  if (!seed) return;
+  const user = process.env.GATE_USER || 'admin';
+  writeRecord(makeRecord(seed, PASSWORD_ONLY ? undefined : user));
+  console.log('dsh-gate: seeded credential record from environment');
+}
+seedConfigIfNeeded();
+// No record is a legal state ONLY in password-only mode: the gate then
+// serves the one-time setup page until the first password is created.
+// Any other mode fails loudly here, as it always has.
+let config = null;
+if (fs.existsSync(CONFIG_FILE)) {
+  config = loadConfig();
+} else if (!PASSWORD_ONLY) {
+  config = loadConfig();
+}
+
+function passwordMatches(candidate) {
+  const digest = crypto.scryptSync(String(candidate), config.salt, 64);
+  const expected = Buffer.from(config.digest, 'hex');
+  return digest.length === expected.length && crypto.timingSafeEqual(digest, expected);
+}
+
+// ---------- gate session cookie ----------
+function sign(payloadB64) {
+  return crypto.createHmac('sha256', Buffer.from(config.signing, 'hex'))
+    .update(payloadB64).digest('base64url');
+}
+function sessionUser() {
+  return (config && config.user) || '(password-only)';
+}
+function makeSessionCookie() {
+  const payload = {};
+  payload.u = sessionUser();
+  payload.iat = Date.now();
+  const b64 = Buffer.from(JSON.stringify(payload), 'utf8').toString('base64url');
+  return `${COOKIE_NAME}=${b64}.${sign(b64)}; Max-Age=${COOKIE_MAX_AGE_S}; Path=/; HttpOnly; SameSite=Strict`;
+}
+function sessionPayload(req) {
+  const header = req.headers.cookie || '';
+  for (const part of header.split(';')) {
+    const eq = part.indexOf('=');
+    if (eq < 0) continue;
+    if (part.slice(0, eq).trim() !== COOKIE_NAME) continue;
+    const value = part.slice(eq + 1).trim();
+    const dot = value.lastIndexOf('.');
+    if (dot < 0) return null;
+    const b64 = value.slice(0, dot);
+    const sig = value.slice(dot + 1);
+    const expected = sign(b64);
+    const a = Buffer.from(sig);
+    const b = Buffer.from(expected);
+    if (a.length !== b.length || !crypto.timingSafeEqual(a, b)) return null;
+    try {
+      const payload = JSON.parse(Buffer.from(b64, 'base64url').toString('utf8'));
+      return payload.u === sessionUser() ? payload : null;
+    } catch {
+      return null;
+    }
+  }
+  return null;
+}
+function sessionValid(req) {
+  return sessionPayload(req) !== null;
+}
+function sessionAgeMs(req) {
+  const payload = sessionPayload(req);
+  if (!payload || typeof payload.iat !== 'number') return Infinity;
+  return Date.now() - payload.iat;
+}
+
+// ---------- dsh token exchange (server-side jar) ----------
+let dshJar = '';          // "name=value; name=value" for upstream requests
+let exchangeInFlight = null;
+
+function currentToken() {
+  try {
+    const text = fs.readFileSync(LINK_FILE, 'utf8').trim();
+    const url = new URL(text.split(/\s+/).pop());
+    return url.searchParams.get('token') || '';
+  } catch {
+    return '';
+  }
+}
+
+function exchange() {
+  if (exchangeInFlight) return exchangeInFlight;
+  exchangeInFlight = new Promise((resolve) => {
+    const token = currentToken();
+    if (!token) { resolve(false); return; }
+    const req = http.request({
+      host: UPSTREAM_HOST, port: UPSTREAM_PORT, method: 'GET',
+      path: `/?token=${encodeURIComponent(token)}`,
+      headers: { Host: authority() },
+    }, (res) => {
+      res.resume();
+      res.on('end', () => {
+        const setCookies = res.headers['set-cookie'] || [];
+        if (setCookies.length > 0) {
+          dshJar = setCookies.map((c) => c.split(';')[0].trim()).join('; ');
+          resolve(true);
+        } else {
+          resolve(false);
+        }
+      });
+    });
+    req.on('error', () => resolve(false));
+    req.setTimeout(8000, () => { req.destroy(); resolve(false); });
+    req.end();
+  }).finally(() => { exchangeInFlight = null; });
+  return exchangeInFlight;
+}
+
+// ---------- login rate limiting ----------
+const failures = new Map(); // ip -> {count, firstAt}
+function rateLimited(ip) {
+  const rec = failures.get(ip);
+  if (!rec) return false;
+  if (Date.now() - rec.firstAt > 5 * 60 * 1000) { failures.delete(ip); return false; }
+  return rec.count >= 5;
+}
+function recordFailure(ip) {
+  const rec = failures.get(ip);
+  if (!rec || Date.now() - rec.firstAt > 5 * 60 * 1000) {
+    failures.set(ip, { count: 1, firstAt: Date.now() });
+  } else {
+    rec.count += 1;
+  }
+}
+
+// ---------- login & setup pages ----------
+const PAGE_STYLE = `
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+    background:#0b0e14; color:#e6e9ee; font-family:system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+  .card { width:min(92vw, 340px); background:#12161f; border:1px solid #232a38; border-radius:14px;
+    padding:28px 26px 22px; box-shadow:0 12px 40px rgba(0,0,0,.45); }
+  h1 { font-size:19px; margin:0 0 4px; font-weight:650; }
+  .sub { color:#8b94a5; font-size:13px; margin:0 0 20px; }
+  label { display:block; font-size:12.5px; color:#aab3c2; margin:14px 0 6px; }
+  input { width:100%; box-sizing:border-box; padding:10px 12px; border-radius:9px; border:1px solid #2b3446;
+    background:#0d1119; color:#e6e9ee; font-size:15px; outline:none; }
+  input:focus { border-color:#4d7cff; }
+  button { width:100%; margin-top:20px; padding:11px; border:0; border-radius:9px; cursor:pointer;
+    background:#4d7cff; color:#fff; font-size:15px; font-weight:600; }
+  button:hover { background:#3f6fe8; }
+  .err { background:#3a1620; border:1px solid #6e2436; color:#ff9db0; border-radius:9px;
+    padding:9px 12px; font-size:13px; margin:0 0 6px; }
+  .foot { color:#5d6675; font-size:11.5px; text-align:center; margin:16px 0 0; }`;
+
+function loginPage(error) {
+  const errHtml = error ? `<p class="err">${error}</p>` : '';
+  const userHtml = PASSWORD_ONLY ? '' : `
+  <label for="u">Username</label>
+  <input id="u" name="username" autocomplete="username" value="${config.user}" required>`;
+  return `<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepSeek Harness — Sign in</title>
+<style>${PAGE_STYLE}
+</style></head>
+<body><form class="card" method="post" action="/__gate/login">
+  <h1>DeepSeek Harness</h1>
+  <p class="sub">${SUBTITLE}</p>
+  ${errHtml}${userHtml}
+  <label for="p">Password</label>
+  <input id="p" name="password" type="password" autocomplete="current-password" autofocus required>
+  <button type="submit">Sign in</button>
+  <p class="foot">Front door by Nell ✨ — dsh itself is untouched</p>
+</form></body></html>`;
+}
+
+// One-time setup, served only in password-only mode while no credential
+// record exists. The first visitor creates the password; the page then
+// closes forever (the record existing is what closes it).
+function setupPage(error) {
+  const errHtml = error ? `<p class="err">${error}</p>` : '';
+  return `<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepSeek Harness — Set up</title>
+<style>${PAGE_STYLE}
+</style></head>
+<body><form class="card" method="post" action="/__gate/setup">
+  <h1>DeepSeek Harness</h1>
+  <p class="sub">Welcome — first sign-in. Create the password for this harness; you'll use it every time after this.</p>
+  ${errHtml}
+  <label for="p">New password (at least 10 characters)</label>
+  <input id="p" name="password" type="password" autocomplete="new-password" autofocus required>
+  <label for="p2">Confirm password</label>
+  <input id="p2" name="confirm" type="password" autocomplete="new-password" required>
+  <button type="submit">Create password &amp; sign in</button>
+  <p class="foot">Front door by Nell ✨ — dsh itself is untouched</p>
+</form></body></html>`;
+}
+
+// ---------- proxying ----------
+function upstreamHeaders(req) {
+  const headers = {};
+  for (const [k, v] of Object.entries(req.headers)) {
+    if (k === 'host' || k === 'cookie' || k === 'connection') continue;
+    headers[k] = v;
+  }
+  headers.host = authority();
+  const cookies = [];
+  if (dshJar) cookies.push(dshJar);
+  const raw = req.headers.cookie || '';
+  for (const part of raw.split(';')) {
+    const name = part.split('=')[0].trim();
+    if (name && name !== COOKIE_NAME) cookies.push(part.trim());
+  }
+  if (cookies.length) headers.cookie = cookies.join('; ');
+  return headers;
+}
+
+function proxy(req, res, retried) {
+  const opts = {
+    host: UPSTREAM_HOST, port: UPSTREAM_PORT,
+    method: req.method, path: req.url, headers: upstreamHeaders(req),
+  };
+  const up = http.request(opts, (upRes) => {
+    if (upRes.statusCode === 401 && !retried && (req.method === 'GET' || req.method === 'HEAD')) {
+      upRes.resume();
+      exchange().then(() => proxy(req, res, true));
+      return;
+    }
+    if (upRes.statusCode === 401) exchange(); // refresh jar for next time
+    const headers = { ...upRes.headers };
+    if (sessionAgeMs(req) > RENEW_AFTER_MS) {
+      // Sliding renewal: quietly extend the never-expiring session so the
+      // browser's 400-day cookie cap never actually signs the user out.
+      const existing = upRes.headers['set-cookie'];
+      const merged = existing ? (Array.isArray(existing) ? existing : [existing]) : [];
+      headers['set-cookie'] = [...merged, makeSessionCookie()];
+    }
+    res.writeHead(upRes.statusCode, headers);
+    upRes.pipe(res);
+  });
+  up.on('error', () => {
+    if (!res.headersSent) { res.writeHead(502, { 'content-type': 'text/plain' }); }
+    res.end('gate: dsh is not reachable right now');
+  });
+  req.pipe(up);
+}
+
+// ---------- server ----------
+const server = http.createServer((req, res) => {
+  const url = new URL(req.url, 'http://gate.local');
+
+  if (url.pathname === '/__gate/health') {
+    res.writeHead(200, { 'content-type': 'text/plain' });
+    res.end('ok');
+    return;
+  }
+
+  // ----- setup state: password-only mode with no credential record yet.
+  // Everything funnels to the one-time setup page until a password exists.
+  if (!config) {
+    if (url.pathname === '/__gate/setup' && req.method === 'GET') {
+      res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+      res.end(setupPage(''));
+      return;
+    }
+    if (url.pathname === '/__gate/setup' && req.method === 'POST') {
+      const ip = req.socket.remoteAddress || 'unknown';
+      if (rateLimited(ip)) {
+        res.writeHead(429, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+        res.end(setupPage('Too many attempts — wait a few minutes and try again.'));
+        return;
+      }
+      let body = '';
+      req.on('data', (chunk) => {
+        body += chunk;
+        if (body.length > 16384) req.destroy();
+      });
+      req.on('end', () => {
+        const form = new URLSearchParams(body);
+        const pw = form.get('password') || '';
+        const confirm = form.get('confirm') || '';
+        if (pw.length < 10) {
+          recordFailure(ip);
+          res.writeHead(400, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+          res.end(setupPage('Password needs at least 10 characters.'));
+          return;
+        }
+        if (pw !== confirm) {
+          recordFailure(ip);
+          res.writeHead(400, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+          res.end(setupPage('Those passwords do not match.'));
+          return;
+        }
+        const rec = makeRecord(pw);
+        writeRecord(rec);
+        config = rec;
+        console.log('dsh-gate: password created via first-run setup');
+        res.writeHead(302, { Location: '/', 'Set-Cookie': makeSessionCookie() });
+        res.end();
+      });
+      return;
+    }
+    if (url.pathname.startsWith('/api')) {
+      res.writeHead(401, { 'content-type': 'application/json' });
+      res.end('{"error":"gate setup required"}');
+    } else {
+      res.writeHead(302, { Location: '/__gate/setup' });
+      res.end();
+    }
+    return;
+  }
+
+  // Setup closes forever once a credential record exists.
+  if (url.pathname === '/__gate/setup') {
+    res.writeHead(302, { Location: '/__gate/login' });
+    res.end();
+    return;
+  }
+
+  if (url.pathname === '/__gate/login' && req.method === 'GET') {
+    res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+    res.end(loginPage(''));
+    return;
+  }
+
+  if (url.pathname === '/__gate/login' && req.method === 'POST') {
+    const ip = req.socket.remoteAddress || 'unknown';
+    if (rateLimited(ip)) {
+      res.writeHead(429, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+      res.end(loginPage('Too many attempts — wait a few minutes and try again.'));
+      return;
+    }
+    let body = '';
+    req.on('data', (chunk) => {
+      body += chunk;
+      if (body.length > 16384) req.destroy();
+    });
+    req.on('end', () => {
+      const form = new URLSearchParams(body);
+      const userOk = PASSWORD_ONLY || form.get('username') === config.user;
+      let pwOk = false;
+      try { pwOk = passwordMatches(form.get('password') || ''); } catch { pwOk = false; }
+      if (userOk && pwOk) {
+        failures.delete(ip);
+        res.writeHead(302, { Location: '/', 'Set-Cookie': makeSessionCookie() });
+        res.end();
+      } else {
+        recordFailure(ip);
+        res.writeHead(401, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+        res.end(loginPage(PASSWORD_ONLY ? 'Wrong password.' : 'Wrong username or password.'));
+      }
+    });
+    return;
+  }
+
+  if (url.pathname === '/__gate/logout') {
+    res.writeHead(302, {
+      Location: '/__gate/login',
+      'Set-Cookie': `${COOKIE_NAME}=; Max-Age=0; Path=/; HttpOnly; SameSite=Strict`,
+    });
+    res.end();
+    return;
+  }
+
+  if (url.pathname.startsWith('/__gate/')) {
+    res.writeHead(404, { 'content-type': 'text/plain' });
+    res.end('not found');
+    return;
+  }
+
+  if (!sessionValid(req)) {
+    if (url.pathname.startsWith('/api')) {
+      res.writeHead(401, { 'content-type': 'application/json' });
+      res.end('{"error":"gate authentication required"}');
+    } else {
+      res.writeHead(302, { Location: '/__gate/login' });
+      res.end();
+    }
+    return;
+  }
+
+  proxy(req, res, false);
+});
+
+server.on('upgrade', (req, socket, head) => {
+  if (!config) { socket.destroy(); return; }
+  if (!sessionValid(req)) {
+    socket.write('HTTP/1.1 401 Unauthorized\r\nConnection: close\r\n\r\n');
+    socket.destroy();
+    return;
+  }
+  const upstream = net.connect(UPSTREAM_PORT, UPSTREAM_HOST, () => {
+    const lines = [`${req.method} ${req.url} HTTP/${req.httpVersion}`];
+    const headers = upstreamHeaders(req);
+    headers.connection = 'Upgrade';
+    if (req.headers.upgrade) headers.upgrade = req.headers.upgrade;
+    for (const [k, v] of Object.entries(headers)) lines.push(`${k}: ${v}`);
+    upstream.write(lines.join('\r\n') + '\r\n\r\n');
+    if (head && head.length) upstream.write(head);
+    upstream.pipe(socket);
+    socket.pipe(upstream);
+  });
+  upstream.on('error', () => socket.destroy());
+  socket.on('error', () => upstream.destroy());
+});
+
+server.listen(PORT, BIND_HOST, () => {
+  console.log(`dsh-gate: listening on ${BIND_HOST}:${PORT}, upstream ${UPSTREAM_HOST}:${UPSTREAM_PORT}, authority ${authority()}, auth ${PASSWORD_ONLY ? 'password-only' : 'user+password'}${config ? '' : ' (setup pending)'}`);
+});
