@@ -17,7 +17,12 @@ One thin image (Node 26 + git), two roles, one shared data volume:
   on first open, the gate serves a one-time setup page; that password is
   the sign-in from then on (the gate stores only a salted scrypt hash).
   The gate presents dsh's own bound authority upstream, so it works at
-  whatever address the app lands on.
+  whatever address the app lands on. It also rewrites `Origin`/`Referer`
+  to that same authority: dsh fences `/api` and its live socket with a
+  strict same-origin check (Origin authority must equal Host authority),
+  so without the rewrite every API call 403s whenever the browser reached
+  the app by a different name (umbrel.local, a LAN IP, a tunnel host)
+  than dsh's internal one — the pages load, but nothing inside works.
 
 All durable state is in the app data folder: the harness install, DSH_HOME
 (`home/.dsh` — providers, keys, profiles, plugins, sessions), the default
