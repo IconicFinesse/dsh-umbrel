@@ -1,1 +1,96 @@
-Ly8gUHJvZHVjdGlvbi1zaGFwZSBwcm9vZiBiYXR0ZXJ5IHYyLCBydW4gSU5TSURFIHRoZSBnYXRlIGNvbnRhaW5lci4KLy8gRXhlcmNpc2VzIHRoZSBwYXNzd29yZC1vbmx5IGZpcnN0LXJ1biBmbG93IGEgdXNlciB3b3VsZCBzZWU6IHNldHVwCi8vIHJlZGlyZWN0IC0+IHNldHVwIHBhZ2UgLT4gbWlzbWF0Y2hlZCBwYXNzd29yZHMgcmVqZWN0ZWQgLT4gcGFzc3dvcmQKLy8gY3JlYXRlZCAtPiBkc2ggVUkgdGhyb3VnaCB0aGUgZ2F0ZSAtPiBzZXR1cCBjbG9zZWQgZm9yZXZlciAtPiBsb2dpbgovLyBwYWdlIGZvciBmcmVzaCB2aXNpdG9ycyAtPiB3cm9uZyBwYXNzd29yZCAtPiBjb3JyZWN0IHBhc3N3b3JkIC0+IFVJLgondXNlIHN0cmljdCc7CmNvbnN0IG9zID0gcmVxdWlyZSgnbm9kZTpvcycpOwoKZnVuY3Rpb24gb3duSVB2NCgpIHsKICBmb3IgKGNvbnN0IGxpc3Qgb2YgT2JqZWN0LnZhbHVlcyhvcy5uZXR3b3JrSW50ZXJmYWNlcygpKSkgewogICAgZm9yIChjb25zdCBhIG9mIGxpc3QgfHwgW10pIHsKICAgICAgaWYgKGEuZmFtaWx5ID09PSAnSVB2NCcgJiYgIWEuaW50ZXJuYWwpIHJldHVybiBhLmFkZHJlc3M7CiAgICB9CiAgfQogIHJldHVybiAnMTI3LjAuMC4xJzsKfQpjb25zdCBCQVNFID0gYGh0dHA6Ly8ke293bklQdjQoKX06MzA4MWA7CmNvbnN0IHJlc3VsdHMgPSBbXTsKZnVuY3Rpb24gY2hlY2sobmFtZSwgb2ssIGRldGFpbCkgewogIHJlc3VsdHMucHVzaChgJHtvayA/ICdQQVNTJyA6ICdGQUlMJ30gICR7bmFtZX0ke2RldGFpbCA/IGAg4oCUICR7ZGV0YWlsfWAgOiAnJ31gKTsKICByZXR1cm4gb2s7Cn0KY29uc3QgUFcgPSAncHJvb2YtcGFzc3dvcmQtMSc7CgooYXN5bmMgKCkgPT4gewogIC8vIDEuIEZyZXNoIGdhdGUgKG5vIGNyZWRlbnRpYWwgcmVjb3JkKTogcm9vdCBmdW5uZWxzIHRvIHNldHVwLgogIGxldCByID0gYXdhaXQgZmV0Y2goYCR7QkFTRX0vYCwgeyByZWRpcmVjdDogJ21hbnVhbCcgfSk7CiAgY2hlY2soJ2ZyZXNoIC8gcmVkaXJlY3RzIHRvIHNldHVwJywgci5zdGF0dXMgPT09IDMwMiAmJiAoci5oZWFkZXJzLmdldCgnbG9jYXRpb24nKSB8fCAnJykgPT09ICcvX19nYXRlL3NldHVwJywgYHN0YXR1cyAke3Iuc3RhdHVzfWApOwoKICAvLyAyLiBTZXR1cCBwYWdlIHJlbmRlcnMuCiAgciA9IGF3YWl0IGZldGNoKGAke0JBU0V9L19fZ2F0ZS9zZXR1cGApOwogIGxldCBib2R5ID0gYXdhaXQgci50ZXh0KCk7CiAgY2hlY2soJ3NldHVwIHBhZ2UgcmVuZGVycycsIHIuc3RhdHVzID09PSAyMDAgJiYgYm9keS5pbmNsdWRlcygnQ3JlYXRlIHRoZSBwYXNzd29yZCcpLCBgc3RhdHVzICR7ci5zdGF0dXN9YCk7CgogIC8vIDMuIE1pc21hdGNoZWQgcGFzc3dvcmRzIGFyZSByZWplY3RlZC4KICByID0gYXdhaXQgZmV0Y2goYCR7QkFTRX0vX19nYXRlL3NldHVwYCwgewogICAgbWV0aG9kOiAnUE9TVCcsCiAgICBoZWFkZXJzOiB7ICdjb250ZW50LXR5cGUnOiAnYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkJyB9LAogICAgYm9keTogYHBhc3N3b3JkPSR7UFd9JmNvbmZpcm09ZGlmZmVyZW50LXBhc3N3b3JkYCwKICAgIHJlZGlyZWN0OiAnbWFudWFsJywKICB9KTsKICBjaGVjaygnbWlzbWF0Y2hlZCBzZXR1cCBwYXNzd29yZHMgcmVqZWN0ZWQnLCByLnN0YXR1cyA9PT0gNDAwLCBgc3RhdHVzICR7ci5zdGF0dXN9YCk7CgogIC8vIDQuIE1hdGNoaW5nIHBhc3N3b3JkcyBjcmVhdGUgdGhlIHJlY29yZCBhbmQgc2lnbiBpbi4KICByID0gYXdhaXQgZmV0Y2goYCR7QkFTRX0vX19nYXRlL3NldHVwYCwgewogICAgbWV0aG9kOiAnUE9TVCcsCiAgICBoZWFkZXJzOiB7ICdjb250ZW50LXR5cGUnOiAnYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkJyB9LAogICAgYm9keTogYHBhc3N3b3JkPSR7UFd9JmNvbmZpcm09JHtQV31gLAogICAgcmVkaXJlY3Q6ICdtYW51YWwnLAogIH0pOwogIGNvbnN0IGNvb2tpZSA9IChyLmhlYWRlcnMuZ2V0KCdzZXQtY29va2llJykgfHwgJycpLnNwbGl0KCc7JylbMF07CiAgY2hlY2soJ3NldHVwIGNyZWF0ZXMgcGFzc3dvcmQgYW5kIHNpZ25zIGluJywgci5zdGF0dXMgPT09IDMwMiAmJiBjb29raWUuc3RhcnRzV2l0aCgnZHNoX2dhdGU9JyksIGBzdGF0dXMgJHtyLnN0YXR1c31gKTsKCiAgLy8gNS4gVGhlIGRzaCBVSSBsb2FkcyB0aHJvdWdoIHRoZSBnYXRlIHdpdGggdGhlIHNldHVwIHNlc3Npb24uCiAgciA9IGF3YWl0IGZldGNoKGAke0JBU0V9L2AsIHsgaGVhZGVyczogeyBDb29raWU6IGNvb2tpZSB9IH0pOwogIGJvZHkgPSBhd2FpdCByLnRleHQoKTsKICBjaGVjaygnZHNoIFVJIHNlcnZlZCB0aHJvdWdoIGdhdGUgYWZ0ZXIgc2V0dXAnLCByLnN0YXR1cyA9PT0gMjAwICYmIGJvZHkuaW5jbHVkZXMoJ0RlZXBTZWVrIEhhcm5lc3MnKSwgYHN0YXR1cyAke3Iuc3RhdHVzfWApOwoKICAvLyA2LiBTZXR1cCBpcyBjbG9zZWQgbm93OiB1bmF1dGhlbnRpY2F0ZWQgc2V0dXAgcGFnZSByZWRpcmVjdHMgdG8gbG9naW4uCiAgciA9IGF3YWl0IGZldGNoKGAke0JBU0V9L19fZ2F0ZS9zZXR1cGAsIHsgcmVkaXJlY3Q6ICdtYW51YWwnIH0pOwogIGNoZWNrKCdzZXR1cCBwYWdlIGNsb3NlZCBhZnRlciBzZXR1cCcsIHIuc3RhdHVzID09PSAzMDIgJiYgKHIuaGVhZGVycy5nZXQoJ2xvY2F0aW9uJykgfHwgJycpID09PSAnL19fZ2F0ZS9sb2dpbicsIGBzdGF0dXMgJHtyLnN0YXR1c31gKTsKCiAgLy8gNy4gRnJlc2ggdmlzaXRvcnMgbm93IGdldCB0aGUgbG9naW4gcGFnZSwgbm90IHNldHVwLgogIHIgPSBhd2FpdCBmZXRjaChgJHtCQVNFfS9gLCB7IHJlZGlyZWN0OiAnbWFudWFsJyB9KTsKICBjaGVjaygnZnJlc2ggLyByZWRpcmVjdHMgdG8gbG9naW4gYWZ0ZXIgc2V0dXAnLCByLnN0YXR1cyA9PT0gMzAyICYmIChyLmhlYWRlcnMuZ2V0KCdsb2NhdGlvbicpIHx8ICcnKSA9PT0gJy9fX2dhdGUvbG9naW4nLCBgc3RhdHVzICR7ci5zdGF0dXN9YCk7CgogIC8vIDguIFdyb25nIHBhc3N3b3JkIGlzIHJlamVjdGVkIGF0IGxvZ2luLgogIHIgPSBhd2FpdCBmZXRjaChgJHtCQVNFfS9fX2dhdGUvbG9naW5gLCB7CiAgICBtZXRob2Q6ICdQT1NUJywKICAgIGhlYWRlcnM6IHsgJ2NvbnRlbnQtdHlwZSc6ICdhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQnIH0sCiAgICBib2R5OiAncGFzc3dvcmQ9d3JvbmctcGFzc3dvcmQnLAogICAgcmVkaXJlY3Q6ICdtYW51YWwnLAogIH0pOwogIGNoZWNrKCd3cm9uZyBsb2dpbiBwYXNzd29yZCByZWplY3RlZCcsIHIuc3RhdHVzID09PSA0MDEsIGBzdGF0dXMgJHtyLnN0YXR1c31gKTsKCiAgLy8gOS4gQ29ycmVjdCBwYXNzd29yZCBzaWducyBpbiAocGFzc3dvcmQgb25seSwgbm8gdXNlcm5hbWUpLgogIHIgPSBhd2FpdCBmZXRjaChgJHtCQVNFfS9fX2dhdGUvbG9naW5gLCB7CiAgICBtZXRob2Q6ICdQT1NUJywKICAgIGhlYWRlcnM6IHsgJ2NvbnRlbnQtdHlwZSc6ICdhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQnIH0sCiAgICBib2R5OiBgcGFzc3dvcmQ9JHtQV31gLAogICAgcmVkaXJlY3Q6ICdtYW51YWwnLAogIH0pOwogIGNvbnN0IGNvb2tpZTIgPSAoci5oZWFkZXJzLmdldCgnc2V0LWNvb2tpZScpIHx8ICcnKS5zcGxpdCgnOycpWzBdOwogIGNvbnN0IG9rTG9naW4gPSByLnN0YXR1cyA9PT0gMzAyICYmIGNvb2tpZTIuc3RhcnRzV2l0aCgnZHNoX2dhdGU9Jyk7CiAgY2hlY2soJ3Bhc3N3b3JkLW9ubHkgbG9naW4gc2lnbnMgaW4nLCBva0xvZ2luLCBgc3RhdHVzICR7ci5zdGF0dXN9YCk7CgogIC8vIDEwLiBBbmQgdGhlIFVJIGxvYWRzIHdpdGggdGhlIGxvZ2luIHNlc3Npb24gdG9vLgogIGlmIChva0xvZ2luKSB7CiAgICByID0gYXdhaXQgZmV0Y2goYCR7QkFTRX0vYCwgeyBoZWFkZXJzOiB7IENvb2tpZTogY29va2llMiB9IH0pOwogICAgYm9keSA9IGF3YWl0IHIudGV4dCgpOwogICAgY2hlY2soJ2RzaCBVSSBzZXJ2ZWQgdGhyb3VnaCBnYXRlIGFmdGVyIGxvZ2luJywgci5zdGF0dXMgPT09IDIwMCAmJiBib2R5LmluY2x1ZGVzKCdEZWVwU2VlayBIYXJuZXNzJyksIGBzdGF0dXMgJHtyLnN0YXR1c31gKTsKICB9CgogIGNvbnNvbGUubG9nKHJlc3VsdHMuam9pbignXG4nKSk7CiAgaWYgKHJlc3VsdHMuc29tZSgobCkgPT4gbC5zdGFydHNXaXRoKCdGQUlMJykpKSBwcm9jZXNzLmV4aXQoMSk7Cn0pKCkuY2F0Y2goKGUpID0+IHsgY29uc29sZS5sb2cocmVzdWx0cy5qb2luKCdcbicpKTsgY29uc29sZS5sb2coJ0JBVFRFUlkgRVJST1InLCBlLm1lc3NhZ2UpOyBwcm9jZXNzLmV4aXQoMik7IH0pOwo=
+// Production-shape proof battery v2, run INSIDE the gate container.
+// Exercises the password-only first-run flow a user would see: setup
+// redirect -> setup page -> mismatched passwords rejected -> password
+// created -> dsh UI through the gate -> setup closed forever -> login
+// page for fresh visitors -> wrong password -> correct password -> UI.
+'use strict';
+const os = require('node:os');
+
+function ownIPv4() {
+  for (const list of Object.values(os.networkInterfaces())) {
+    for (const a of list || []) {
+      if (a.family === 'IPv4' && !a.internal) return a.address;
+    }
+  }
+  return '127.0.0.1';
+}
+const BASE = `http://${ownIPv4()}:3081`;
+const results = [];
+function check(name, ok, detail) {
+  results.push(`${ok ? 'PASS' : 'FAIL'}  ${name}${detail ? ` — ${detail}` : ''}`);
+  return ok;
+}
+const PW = 'proof-password-1';
+
+(async () => {
+  // 1. Fresh gate (no credential record): root funnels to setup.
+  let r = await fetch(`${BASE}/`, { redirect: 'manual' });
+  check('fresh / redirects to setup', r.status === 302 && (r.headers.get('location') || '') === '/__gate/setup', `status ${r.status}`);
+
+  // 2. Setup page renders.
+  r = await fetch(`${BASE}/__gate/setup`);
+  let body = await r.text();
+  check('setup page renders', r.status === 200 && body.includes('Create the password'), `status ${r.status}`);
+
+  // 3. Mismatched passwords are rejected.
+  r = await fetch(`${BASE}/__gate/setup`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/x-www-form-urlencoded' },
+    body: `password=${PW}&confirm=different-password`,
+    redirect: 'manual',
+  });
+  check('mismatched setup passwords rejected', r.status === 400, `status ${r.status}`);
+
+  // 4. Matching passwords create the record and sign in.
+  r = await fetch(`${BASE}/__gate/setup`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/x-www-form-urlencoded' },
+    body: `password=${PW}&confirm=${PW}`,
+    redirect: 'manual',
+  });
+  const cookie = (r.headers.get('set-cookie') || '').split(';')[0];
+  check('setup creates password and signs in', r.status === 302 && cookie.startsWith('dsh_gate='), `status ${r.status}`);
+
+  // 5. The dsh UI loads through the gate with the setup session.
+  r = await fetch(`${BASE}/`, { headers: { Cookie: cookie } });
+  body = await r.text();
+  check('dsh UI served through gate after setup', r.status === 200 && body.includes('DeepSeek Harness'), `status ${r.status}`);
+
+  // 6. Setup is closed now: unauthenticated setup page redirects to login.
+  r = await fetch(`${BASE}/__gate/setup`, { redirect: 'manual' });
+  check('setup page closed after setup', r.status === 302 && (r.headers.get('location') || '') === '/__gate/login', `status ${r.status}`);
+
+  // 7. Fresh visitors now get the login page, not setup.
+  r = await fetch(`${BASE}/`, { redirect: 'manual' });
+  check('fresh / redirects to login after setup', r.status === 302 && (r.headers.get('location') || '') === '/__gate/login', `status ${r.status}`);
+
+  // 8. Wrong password is rejected at login.
+  r = await fetch(`${BASE}/__gate/login`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/x-www-form-urlencoded' },
+    body: 'password=wrong-password',
+    redirect: 'manual',
+  });
+  check('wrong login password rejected', r.status === 401, `status ${r.status}`);
+
+  // 9. Correct password signs in (password only, no username).
+  r = await fetch(`${BASE}/__gate/login`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/x-www-form-urlencoded' },
+    body: `password=${PW}`,
+    redirect: 'manual',
+  });
+  const cookie2 = (r.headers.get('set-cookie') || '').split(';')[0];
+  const okLogin = r.status === 302 && cookie2.startsWith('dsh_gate=');
+  check('password-only login signs in', okLogin, `status ${r.status}`);
+
+  // 10. And the UI loads with the login session too.
+  if (okLogin) {
+    r = await fetch(`${BASE}/`, { headers: { Cookie: cookie2 } });
+    body = await r.text();
+    check('dsh UI served through gate after login', r.status === 200 && body.includes('DeepSeek Harness'), `status ${r.status}`);
+  }
+
+  console.log(results.join('\n'));
+  if (results.some((l) => l.startsWith('FAIL'))) process.exit(1);
+})().catch((e) => { console.log(results.join('\n')); console.log('BATTERY ERROR', e.message); process.exit(2); });
