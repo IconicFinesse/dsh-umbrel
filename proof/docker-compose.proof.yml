@@ -1,0 +1,39 @@
+# Local proof of the production package shape — NOT shipped.
+# Mirrors iconicfinesse-dsh/docker-compose.yml with three substitutions:
+# build the image locally instead of pulling GHCR, a named volume instead
+# of ${APP_DATA_DIR}, and a literal throwaway seed password.
+version: "3.7"
+
+services:
+  web:
+    build:
+      context: ..
+    entrypoint: ["node", "/usr/local/lib/dsh-gate/gate.js"]
+    restart: "no"
+    environment:
+      GATE_PORT: "3081"
+      GATE_USER: braukw
+      GATE_SEED_PASSWORD: proof-pass-123
+      GATE_UPSTREAM_HOST: dsh
+      GATE_UPSTREAM_PORT: "3080"
+      GATE_LINK_FILE: /data/home/dsh-link.txt
+      GATE_CONFIG: /data/gate/gate.json
+      GATE_SUBTITLE: "on Umbrel — sign in to continue"
+    volumes:
+      - proof-data:/data
+    # battery.js is NOT bind-mounted: the nested daemon resolves bind
+    # sources inside Arcane's namespace, where the host path doesn't exist.
+    # Deliver it with: docker cp battery.js dsh-proof-web-1:/tmp/battery.js
+    # then: docker compose exec web node /tmp/battery.js
+    depends_on:
+      - dsh
+
+  dsh:
+    build:
+      context: ..
+    restart: "no"
+    volumes:
+      - proof-data:/data
+
+volumes:
+  proof-data:
