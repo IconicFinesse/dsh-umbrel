@@ -304,6 +304,22 @@ function upstreamHeaders(req) {
     headers[k] = v;
   }
   headers.host = authority();
+  // dsh enforces a strict same-origin fence on /api and the remote mux:
+  // when an Origin (or Referer) is present, its authority must equal the
+  // Host authority, or dsh answers 403. The gate is the trusted front
+  // door and already presents dsh's own authority as Host, so present it
+  // as the origin too — otherwise any browser that reached the gate by a
+  // different name (umbrel.local, a LAN IP, a tunnel host) is fenced out
+  // of every API call even though the pages themselves load.
+  const auth = authority();
+  if (headers.origin) {
+    try { headers.origin = `${new URL(headers.origin).protocol}//${auth}`; }
+    catch { delete headers.origin; }
+  }
+  if (headers.referer) {
+    try { const r = new URL(headers.referer); headers.referer = `${r.protocol}//${auth}${r.pathname}${r.search}`; }
+    catch { delete headers.referer; }
+  }
   const cookies = [];
   if (dshJar) cookies.push(dshJar);
   const raw = req.headers.cookie || '';
