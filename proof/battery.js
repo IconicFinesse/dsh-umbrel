@@ -3,8 +3,12 @@
 // redirect -> setup page -> mismatched passwords rejected -> password
 // created -> dsh UI through the gate -> setup closed forever -> login
 // page for fresh visitors -> wrong password -> correct password -> UI.
+// Final check: an /api POST whose Origin names a different authority
+// than dsh's own (the umbrel.local case) must still pass dsh's
+// same-origin fence, because the gate rewrites Origin to match Host.
 'use strict';
 const os = require('node:os');
+const http = require('node:http');
 
 function ownIPv4() {
   for (const list of Object.values(os.networkInterfaces())) {
@@ -89,6 +93,24 @@ const PW = 'proof-password-1';
     r = await fetch(`${BASE}/`, { headers: { Cookie: cookie2 } });
     body = await r.text();
     check('dsh UI served through gate after login', r.status === 200 && body.includes('DeepSeek Harness'), `status ${r.status}`);
+
+    // 11. An /api POST with a foreign Origin (the browser reached the app
+    // as umbrel.local:8647 while dsh lives at its container authority)
+    // must pass dsh's same-origin fence — the gate rewrites Origin to
+    // match the Host it presents. Raw http so the Origin header is exact.
+    const status = await new Promise((resolve, reject) => {
+      const u = new URL(`${BASE}/api/directoryPicker/list`);
+      const req = http.request({
+        host: u.hostname, port: u.port, path: u.pathname, method: 'POST',
+        headers: {
+          'content-type': 'application/json', Cookie: cookie2,
+          Origin: 'http://umbrel.local:8647',
+        },
+      }, (res) => { res.resume(); res.on('end', () => resolve(res.statusCode)); });
+      req.on('error', reject);
+      req.end('{}');
+    }).catch(() => 0);
+    check('api POST with foreign Origin passes the fence', status === 200, `status ${status}`);
   }
 
   console.log(results.join('\n'));
